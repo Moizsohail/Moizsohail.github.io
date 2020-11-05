@@ -20,7 +20,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/typeit.js', ssr: false },
+    { src: '~~/node_modules/vue-rellax/lib/nuxt-plugin', ssr: false },
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
