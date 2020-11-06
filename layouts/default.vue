@@ -13,13 +13,7 @@
       <nuxt />
     </v-main>
     <v-navigation-drawer v-model="leftDrawer" temporary fixed>
-      <v-container>
-        <v-spacer>
-          <v-list>
-            <v-list-item>Home </v-list-item>
-          </v-list>
-        </v-spacer>
-      </v-container>
+      <Profile></Profile>
     </v-navigation-drawer>
     <v-navigation-drawer v-model="rightDrawer" right temporary fixed>
       <v-list>
@@ -42,8 +36,9 @@
 </template>
 
 <script>
-// import { mdiAccount } from '@mdi/js'
+import Profile from '~/components/profilecard'
 export default {
+  components: { Profile },
   data() {
     return {
       clipped: false,
