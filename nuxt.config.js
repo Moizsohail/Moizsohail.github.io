@@ -17,12 +17,13 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['~assets/main.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/typeit.js', ssr: false },
     { src: '~~/node_modules/vue-rellax/lib/nuxt-plugin', ssr: false },
+    { src: '@/plugins/aos.js', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -34,6 +35,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    'nuxt-gsap',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
