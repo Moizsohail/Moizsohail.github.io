@@ -598,25 +598,30 @@ nav .menu.open .menu-link:hover .text-item .icon {
   }
 }
 @media screen and (max-width: 767px) {
-  nav .menu.open .menu-link:hover.active {
+  nav .menu.open .menu-link:hover.active,
+  nav .menu.open .menu-link.active {
     height: 80vh;
   }
 }
-nav .menu.open .menu-link:hover.active .text-item {
+nav .menu.open .menu-link:hover.active .text-item,
+nav .menu.open .menu-link.active .text-item {
   transform: rotate(0deg) translateX(0px) translateY(-50%);
   transform-origin: center center;
   transition: all 0.6s ease-in-out;
 }
 @media screen and (max-width: 767px) {
+  nav .menu.open .menu-link.active .text-item,
   nav .menu.open .menu-link:hover.active .text-item {
     height: 20%;
     transform: translateY(-180%);
   }
 }
+nav .menu.open .menu-link.active .text-item .icon,
 nav .menu.open .menu-link:hover.active .text-item .icon {
   transition: all 0.3s ease-in-out;
   transform: translateY(40px) rotate(-180deg);
 }
+nav .menu.open .menu-link.active .submenu,
 nav .menu.open .menu-link:hover.active .submenu {
   transform: translateY(0);
   height: 50%;
@@ -625,10 +630,12 @@ nav .menu.open .menu-link:hover.active .submenu {
   bottom: 0;
 }
 @media screen and (max-width: 767px) {
+  nav .menu.open .menu-link.active .submenu,
   nav .menu.open .menu-link:hover.active .submenu {
     height: 70%;
   }
 }
+nav .menu.open .menu-link.active .submenu .sub-item,
 nav .menu.open .menu-link:hover.active .submenu .sub-item {
   display: flex;
   animation: submenu 1s ease forwards;
@@ -648,12 +655,15 @@ nav .menu.open .menu-link:hover.active .submenu .sub-item {
     transform: translatex(0px) rotate(0deg);
   }
 }
+nav .menu.open .menu-link.active .submenu .sub-item:nth-child(1),
 nav .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(1) {
   animation-duration: 1s;
 }
+nav .menu.open .menu-link.active .submenu .sub-item:nth-child(2),
 nav .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(2) {
   animation-duration: 1.2s;
 }
+nav .menu.open .menu-link.active .submenu .sub-item:nth-child(3),
 nav .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(3) {
   animation-duration: 1.4s;
 }
@@ -661,6 +671,7 @@ nav .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(3) {
   nav .menu.open .menu-link {
     width: 100%;
     height: 25%;
+    margin: -1px;
     animation: menu-mobile 0.6s ease forwards;
     transform: translatey(0%);
     right: 0;
@@ -696,6 +707,9 @@ nav .menu.close .menu-link {
 }
 nav .menu.close .menu-link .text-item {
   animation: text-out 0.6s ease forwards;
+}
+.menu.close .submenu {
+  opacity: 0 !important;
 }
 @keyframes text-out {
   0% {
