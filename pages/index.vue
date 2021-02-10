@@ -7,14 +7,7 @@
             <p>Hello!</p>
             <vue-typed-js
               class="coding"
-              :strings="[
-                'World!',
-                'I\'m Moiz ',
-                'I love Programming ',
-                'I like making Websites and Apps',
-                'I like automating stuff',
-                'Let\'s Get Started',
-              ]"
+              :strings="strings"
               :typeSpeed="30"
               :backSpeed="10"
               cursorChar="_"
@@ -30,7 +23,7 @@
     <div class="second">
       <section class="about">
         <v-container class="d-flex flex-row">
-          <div data-aos="fade-up" data-aos-duration="6000" data-aos-delay="300">
+          <div>
             <v-card elevation="2" class="about-image">
               <v-img
                 src="/moiz.jpg"
@@ -42,7 +35,7 @@
           <v-container
             class="about-text"
             v-rellax="{
-              speed: -2.2,
+              speed: safeSpeed(-2.2),
             }"
           >
             <h2 class="text-h3 mb-5">Hi! I am Moiz Sohail</h2>
@@ -88,7 +81,7 @@
               elevation="2"
               class="about-image darken rellax"
               :style="{ 'margin-top': i * 50 + 100 + 'px' }"
-              v-rellax="{ speed: 1.5, 'mobile-speed': 0 }"
+              v-rellax="{ speed: safeSpeed(1.5), 'mobile-speed': 0 }"
             >
               <v-img
                 :src="`https://picsum.photos/1024/1024?random=${i}`"
@@ -105,7 +98,7 @@
             <v-container
               class="about-text"
               :class="{ left: !(i % 2) }"
-              v-rellax="{ speed: -0.5, 'mobile-speed': 0 }"
+              v-rellax="{ speed: safeSpeed(-0.5), 'mobile-speed': 0 }"
             >
               <h2 class="text-overline" v-rellax="{ speed: 0 }">
                 {{ x.head }}
@@ -317,6 +310,57 @@ export default {
     }
   },
   computed: {
+    safeSpeed() {
+      return (speed) => {
+        if (process.client) {
+          const width = window.innerWidth
+          if (width < 800) {
+            return 0
+          }
+        }
+        return speed
+      }
+    },
+    strings() {
+      if (process.client) {
+        const width = window.innerWidth
+        console.log(width)
+        if (width < 400) {
+          return [
+            'World!',
+            "I'm Moiz ",
+            'I love \n Programming ',
+            'I like \n making \n Websites \n and Apps',
+            'I like \n automating \n stuff',
+            "Let's Get \n Started",
+          ]
+        } else if (width < 800) {
+          return [
+            'World!',
+            "I'm Moiz ",
+            'I love \n Programming ',
+            'I like making \n Websites and Apps',
+            'I like \n automating stuff',
+            "Let's Get Started",
+          ]
+        } else
+          return [
+            'World!',
+            "I'm Moiz ",
+            'I love Programming ',
+            'I like making Websites and Apps',
+            'I like automating stuff',
+            "Let's Get Started",
+          ]
+        // ... mobile { ... styles }
+        // ... desktop { ... styles }
+
+        // ... if width is less than 700, return mobile
+        // ... if width greater than 700, return desktop
+      } else {
+        return ['']
+      }
+    },
     currentskills() {
       return this.skills.filter((x) => x.head === this.curr)
     },
@@ -580,7 +624,18 @@ i {
   position: absolute;
   background: transparent;
 }
+@media screen and (max-width: 400px) {
+  .about-image {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 750px) {
+  .text {
+    margin: 35vh 15px;
+  }
+  .socialbar {
+    bottom: 7vh;
+  }
   .about {
     padding: 200px 20px 50px 20px;
   }
