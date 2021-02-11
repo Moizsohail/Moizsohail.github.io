@@ -125,6 +125,7 @@ export default {
   color: #a0989e;
   font-size: 14px;
   line-height: 24px;
+  white-space: pre-line;
   font-weight: 300;
   letter-spacing: 0;
 }

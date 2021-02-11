@@ -19,10 +19,10 @@ export const state = () => ({
       image: '/tech/1_ZBSX06fzK-gFy_Cj3FwzUg.png',
     },
     {
-      title: 'Javascript',
+      title: 'Node Js',
       desc:
-        'Strapi is the leading open-source headless CMS. It’s 100% Javascript, fully customizable and developer-first.',
-      image: '/tech/shotsnapp-1612985845.293.png',
+        'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the Chrome V8 engine and executes JavaScript code outside a web browser.',
+      image: '/tech/1_xdo0UBpyszvD7-7EH4TkIA.png',
     },
     {
       title: 'Socket IO',

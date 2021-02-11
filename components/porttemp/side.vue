@@ -5,7 +5,7 @@
       <p>{{ blob.bigdesc }}</p>
     </div>
     <div class="d-flex container">
-      <div data-aos="zoom-in" class="rside vcenter">
+      <div class="rside vcenter">
         <div class="text">
           <h3>{{ blob.title }}</h3>
           <p>
