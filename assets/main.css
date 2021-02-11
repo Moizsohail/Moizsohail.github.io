@@ -21,3 +21,6 @@ p {
 * {
   --primary: #00ff00;
 }
+body {
+  white-space: pre-line;
+}

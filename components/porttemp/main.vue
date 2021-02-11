@@ -31,6 +31,7 @@ export default {
   display: grid !important;
   grid-template-columns: 1fr 300px auto;
   grid-column-gap: 100px;
+  margin-bottom: 200px;
 }
 .extra-image {
   position: absolute;

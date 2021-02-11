@@ -19,8 +19,10 @@
       <Main v-if="x.type == 'main'" :blob="x"></Main>
       <InfoCol v-if="x.type == 'info'" :blob="x"></InfoCol>
       <Multiple v-if="x.type == 'multiple'" :blob="x"></Multiple>
-      <Large v-if="x.type == 'large'" :blob="x" />
+      <One v-if="x.type == 'one'" :blob="x" />
+      <Parallax v-if="x.type == 'parallax'" :blob="x" />
       <Side v-if="x.type == 'side'" :blob="x" />
+      <Tech v-if="x.type == 'tech'" :blob="x" />
     </div>
     <div class="spacer"></div>
   </div>
@@ -31,12 +33,16 @@ import Main from '~/components/porttemp/main'
 import Multiple from '~/components/porttemp/multiple'
 import InfoCol from '~/components/porttemp/infocol'
 import Side from '~/components/porttemp/side'
-import Large from '~/components/porttemp/onelarge'
+import Parallax from '~/components/porttemp/parallax'
+import One from '~/components/porttemp/one'
+import Tech from '~/components/porttemp/tech'
 export default {
   components: {
     Multiple,
-    Large,
+    Parallax,
     Main,
+    Tech,
+    One,
     InfoCol,
     Side,
   },
@@ -52,7 +58,7 @@ export default {
       if (object.length === 0) {
         return 'error'
       }
-      console.log(object[0].section)
+
       return object[0]
     },
   },
@@ -81,6 +87,31 @@ export default {
   letter-spacing: -2.6px;
   font-family: athelas;
   font-weight: 400;
+}
+.title {
+  margin-bottom: 60px !important;
+  max-width: 1000px;
+  width: 400px;
+}
+.vcenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -50px;
+}
+
+.title h3 {
+  margin: 10px;
+}
+.center {
+  text-align: center;
+  margin: auto;
+}
+.contain {
+  /* padding-left: 24px;
+  padding-right: 24px;
+  max-width: 900px; */
+  margin: auto;
 }
 #port h2 {
   font-size: 72px;
