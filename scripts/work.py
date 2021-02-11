@@ -34,14 +34,17 @@ def CAROUSEL_IMAGES(x):
 
 for x in PROJECT_LIST:
     data = {}
+
     data['img'] = CAROUSEL_IMAGES(x)
     temp = parse(BASE_LINK(x))
+
     data['title'] = temp[0]
-    data['desc'] = temp[1]
-    if len(temp) > 2:
-        data['link'] = temp[2]
+    data['url'] = temp[1]
+    data['desc'] = temp[2]
     if len(temp) > 3:
-        data['color'] = temp[3]
+        data['link'] = temp[3]
+    if len(temp) > 4:
+        data['color'] = temp[4]
     # -    data['title'] = os.path.basename(y)
     #     data['content'] = []
     #     for x in files:

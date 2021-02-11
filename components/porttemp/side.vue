@@ -1,27 +1,29 @@
 <template>
   <div class="side">
-    <div class="title"><h3>Technology</h3></div>
+    <div class="title">
+      <h3>{{ blob.title }}</h3>
+    </div>
     <div class="d-flex">
       <div class="rside">
         <div class="text">
           <h3>{{ current.title }}</h3>
           <p>
-            {{ current.descr }}
+            {{ current.desc }}
           </p>
         </div>
-        <div class="d-flex">
+        <div v-if="technology.length > 1" class="d-flex">
           <img
-            v-for="x in tech"
-            :key="x"
+            v-for="x in technology"
+            :key="x.title"
             class="tech"
-            :src="x.img"
+            :src="x.image"
             @click="curr = x"
             :class="{ active: current == x }"
           />
         </div>
       </div>
       <div class="lside">
-        <img :src="current.img" />
+        <img :src="current.image" />
       </div>
     </div>
   </div>
@@ -31,28 +33,25 @@ export default {
   data() {
     return {
       curr: {},
-      tech: [
-        {
-          title: 'Flutter',
-          descr:
-            'Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.',
-          img: '/work/1Vlancer/shotsnapp-1612984992.885.png',
-        },
-        {
-          title: 'Strapi',
-          descr:
-            'Strapi is the leading open-source headless CMS. It’s 100% Javascript, fully customizable and developer-first.',
-          img: '/work/1Vlancer/shotsnapp-1612985845.293.png',
-        },
-      ],
     }
   },
+  props: {
+    blob: {
+      required: true,
+      type: Object,
+    },
+  },
   computed: {
+    technology() {
+      return this.$store.state.tech.tech.filter((x) =>
+        this.blob.tech.includes(x.title)
+      )
+    },
     current() {
       if (this.curr.title) {
         return this.curr
       }
-      return this.tech[0]
+      return this.technology[0]
     },
   },
 }

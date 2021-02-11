@@ -1,8 +1,64 @@
 {
     "img": [
-        "..\\work\\2DementiaCare+\\image-LogoVersion_Beta_Key_Art_VALORANT.0.jpg"
+        "..\\work\\2DementiaCare+\\image.png"
     ],
+    "bg": "https://www.policyforum.labour.org.uk/uploads/editor/images/GettyImages-912073430_small.jpg",
     "title": "DementiaCare+",
+    "url": "dementiacare",
     "desc": "A program to serve the dementia care takers in pakistan.",
-    "link": "https://moizsohail.github.io/"
+    "section": [
+        {
+            "type": "main",
+            "main": "/work/2DementiaCare+/big.jpg",
+            "title": "Tailored For Pakistan",
+            "desc": "The goal of this project was to introduce a user friendly platform for the Pakistani people. This platform has the potential of allowing people to earn some extra money above their daily money.",
+            "other": "/work/2DementiaCare+/mockuper (4).png"
+        },
+        {
+            "type": "info",
+            "title": "Features",
+            "column": [
+                {
+                    "title": "Messaging",
+                    "desc": "info"
+                },
+                {
+                    "title": "Messaging",
+                    "desc": "info"
+                },
+                {
+                    "title": "Messaging",
+                    "desc": "info"
+                }
+            ]
+        },
+        {
+            "type": "large",
+            "title": "",
+            "desc": "",
+            "images": [
+                "/work/2DementiaCare+/mockuper (6).png",
+                "/work/2DementiaCare+/mockuper (7).png"
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "Vlancer For Android",
+            "desc": "To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.",
+            "images": [
+                "/work/2DementiaCare+/shotsnapp-1613044832.261.png",
+                "/work/2DementiaCare+/shotsnapp-1613044285.463.png",
+                "/work/2DementiaCare+/shotsnapp-1613044768.013.png"
+            ]
+        },
+        {
+            "type": "side",
+            "title": "Technology",
+            "desc": "",
+            "tech": [
+                "Flutter",
+                "Firebase"
+            ]
+        }
+    ]
 }

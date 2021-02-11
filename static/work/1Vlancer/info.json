@@ -1,7 +1,58 @@
 {
     "img": [
-        "..\\work\\1Vlancer\\image.jfif"
+        "..\\work\\1Vlancer\\image.png"
     ],
+    "bg": "https://uploads-ssl.webflow.com/5b6b1bfc681f89d334b144d5/5b6dca153d9b840f1370ab98_lp-hero-2x.jpg",
     "title": "Vlancer",
-    "desc": "A fiverr like startup for the Pakistani graduates."
+    "url": "vlancer",
+    "desc": "A startup to introduce a fiverr like platform within pakistan where people can put up advertisement for work they want to done and the clients on the other can easily connect and earn some money. (Web,iOS, Android).",
+    "section": [
+        {
+            "type": "main",
+            "main": "/work/1Vlancer/FireShot Capture 006 - Vlancer - localhost.png",
+            "title": "Tailored For Pakistan",
+            "desc": "The goal of this project was to introduce a user friendly platform for the Pakistani people. This platform has the potential of allowing people to earn some extra money above their daily money.",
+            "other": "/work/1Vlancer/FireShot Capture 003 - About Us - Vlancer - localhost2.png"
+        },
+        {
+            "type": "info",
+            "title": "Features",
+            "column": [
+                {
+                    "title": "Messaging",
+                    "desc": "info"
+                },
+                {
+                    "title": "Messaging",
+                    "desc": "info"
+                },
+                {
+                    "title": "Messaging",
+                    "desc": "info"
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "title": "Vlancer For Android",
+            "desc": "To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.",
+            "images": [
+                "/work/1Vlancer/shotsnapp-1612980040.961.png",
+                "/work/1Vlancer/shotsnapp-1612980050.82.png",
+                "/work/1Vlancer/shotsnapp-1612978867.965.png",
+                "/work/1Vlancer/shotsnapp-1612980065.223.png",
+                "/work/1Vlancer/shotsnapp-1612978867.965.png",
+                "/work/1Vlancer/shotsnapp-1612981221.31.png"
+            ]
+        },
+        {
+            "type": "side",
+            "title": "Technology",
+            "desc": "",
+            "tech": [
+                "Flutter",
+                "Strapi"
+            ]
+        }
+    ]
 }

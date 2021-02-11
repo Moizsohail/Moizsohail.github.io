@@ -2,24 +2,8 @@
   <div id="portfolio">
     <!-- Vlancer DementiaCare+ PsifiX OrientedYolo MemeCleaner Detector LMSScraper Retweeter-->
     <p class="text-h3 mx-auto title">MY WORK</p>
-    <ul v-show="false" class="list">
-      <li
-        v-for="x in menu"
-        :key="x.title"
-        class="list__item"
-        :class="{ active: currentTag === x.title }"
-        @click="currentTag = x.title"
-      >
-        <span class="text-overline">{{ x.title }}</span>
-      </li>
-    </ul>
-    <div id="list-complete-demo" class="demo">
-      <div
-        :style="`--length: ${filteredItems.length}`"
-        name="list-complete"
-        class="list-complete"
-        tag="section"
-      >
+    <div id="list-complete-demo">
+      <div class="list-complete" tag="section">
         <div class="trans row">
           <div
             v-for="(item, i) in work"
@@ -27,7 +11,7 @@
             class="col-md-4 col-lg-3 col-sm-6 col-xs-12"
             :style="`--index: ${i};`"
           >
-            <div class="list-complete-item" elevation="5">
+            <div class="list-complete-item" @click="goto(item)" elevation="5">
               <v-img
                 v-ripple
                 :src="item.img[0]"
@@ -50,7 +34,7 @@
               </v-img>
               <p class="text-h3 top-title">{{ item.title }}</p>
               <!-- <p class="text-p bottom-tags">{{ item.tags | toString }}</p> -->
-              <v-img
+              <!-- <v-img
                 :src="item.img"
                 aspect-ratio="0.7"
                 class="grey lighten-2 overlay"
@@ -68,12 +52,11 @@
                     ></v-progress-circular>
                   </v-row>
                 </template>
-              </v-img>
+              </v-img> -->
             </div>
           </div>
         </div>
       </div>
-      <Modal :obj="currObj" @close="close" />
     </div>
   </div>
 </template>
@@ -97,79 +80,20 @@ export default {
       id: -1,
       items: [],
       currObj: {},
-      menu: [
-        {
-          title: 'Featured',
-          active: true,
-        },
-        {
-          title: 'Latest',
-          active: false,
-        },
-        {
-          title: 'Categories',
-          active: false,
-        },
-      ],
     }
   },
   computed: {
     work() {
       return this.$store.state.work.data
     },
-    // deprecated
-    filteredItems() {
-      if (Object.keys(this.$route.query).length === 0) {
-        return this.$store.state.projects.filter((x) => x.featured)
-      }
-    },
-    currentTag() {
-      if (this.$route.query.featured === 'true') {
-        return 'Featured'
-      }
-    },
   },
 
   methods: {
-    filter(tag) {
-      this.currentTag = tag
+    goto(x) {
+      this.$router.push('/portfolio/' + x.url)
     },
     close() {
       this.currObj = {}
-      console.log(this.currObj)
-    },
-    beforeEnter(el) {
-      el.style.opacity = 0
-      el.style.transform = 'translateY(50px)'
-      // el.style.position = 'absolute'
-      // el.style.height = 0
-    },
-    enter(el, done) {
-      this.$gsap.to(el, {
-        opacity: 1,
-        transform: 'translateY(0px)',
-        // transof: '1.6em',
-        delay: el.dataset.index * 0.15,
-        onComplete: done,
-      })
-    },
-    beforeLeave(el) {
-      const { marginLeft, marginTop, width, height } = window.getComputedStyle(
-        el
-      )
-
-      el.style.left = `${el.offsetLeft - parseFloat(marginLeft, 10)}px`
-      el.style.top = `${el.offsetTop - parseFloat(marginTop, 10)}px`
-      el.style.width = width
-      el.style.height = height
-    },
-    leave(el, done) {
-      this.$gsap.to(el, {
-        opacity: 0,
-        // height: 0,
-        delay: el.dataset.index * 0.15,
-        onComplete: done,
-      })
     },
   },
 }

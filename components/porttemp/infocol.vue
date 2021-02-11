@@ -1,11 +1,13 @@
 <template>
   <div class="infocol">
-    <div class="title"><h3>Features</h3></div>
+    <div class="title">
+      <h3>{{ blob.title }}</h3>
+    </div>
     <div class="d-flex">
-      <div v-for="x in info" :key="x.title">
+      <div v-for="(x, i) in blob.column" :key="x.title + i">
         <div class="content">
           <h3 class="minititle">{{ x.title }}</h3>
-          <p>{{ x.decr }}</p>
+          <p>{{ x.desc }}</p>
         </div>
       </div>
     </div>
@@ -21,6 +23,12 @@ export default {
         { title: 'Easy Paisa Transaction', decr: 'Platform' },
       ],
     }
+  },
+  props: {
+    blob: {
+      type: Object,
+      required: true,
+    },
   },
 }
 </script>

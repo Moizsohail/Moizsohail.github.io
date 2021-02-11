@@ -129,7 +129,7 @@
 </template>
 <script>
 import SocialBar from '~/components/socialbar'
-import Services from '~/components/Services'
+import Services from '~/components/Service'
 
 export default {
   components: {

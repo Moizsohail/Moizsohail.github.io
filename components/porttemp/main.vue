@@ -1,26 +1,29 @@
 <template>
   <div class="d-flex">
     <div class="main-image">
-      <img
-        src="/work/1Vlancer/FireShot Capture 006 - Vlancer - localhost.png"
-      />
+      <img :src="blob.main" />
     </div>
     <div class="content">
-      <h3>Tailored For Pakistan</h3>
+      <h3>{{ blob.title }}</h3>
       <p>
-        The goal of this project was to introduce a user friendly platform for
-        the Pakistani people. This platform has the potential of allowing people
-        to earn some extra money above their daily money.
+        {{ blob.desc }}
       </p>
     </div>
     <div class="extra-image" v-rellax="{ speed: -1.5 }">
-      <img
-        src="/work/1Vlancer/FireShot Capture 003 - About Us - Vlancer - localhost2.png"
-      />
+      <img :src="blob.other" />
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  props: {
+    blob: {
+      type: Object,
+      required: true,
+    },
+  },
+}
+</script>
 <style scoped>
 .d-flex {
   max-width: 1280px;

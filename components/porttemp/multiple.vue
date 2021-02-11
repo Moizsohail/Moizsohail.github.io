@@ -1,17 +1,15 @@
 <template>
   <div class="multiple">
     <div class="content">
-      <h3>Vlancer For Android</h3>
+      <h3>{{ blob.title }}</h3>
       <p>
-        To maximize the outreach, we have made use of the flutter framework to
-        try and target both android and ios users. At the moment, due to some
-        limitations the IOS application has been delayed.
+        {{ blob.desc }}
       </p>
     </div>
 
     <div class="container">
       <img
-        v-for="(x, i) in imgs"
+        v-for="(x, i) in blob.images"
         :key="x + i"
         class="img"
         :class="{ odd: i % 3 == 1 }"
@@ -33,6 +31,12 @@ export default {
         '/work/1Vlancer/shotsnapp-1612981221.31.png',
       ],
     }
+  },
+  props: {
+    blob: {
+      type: Object,
+      required: true,
+    },
   },
 }
 </script>

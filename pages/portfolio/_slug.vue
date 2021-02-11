@@ -2,21 +2,26 @@
   <div id="port">
     <div class="project-hero">
       <div class="cover" :style="{ opacity: opacity }"></div>
-      <div class="hero-image-lp"></div>
+      <div
+        class="hero-image-lp"
+        :style="{
+          'background-image': ` linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${current.bg})`,
+        }"
+      ></div>
       <div class="project-intro">
-        <h2>Vlancer</h2>
+        <h2>{{ current.title }}</h2>
         <p class="descr">
-          A startup to introduce a fiverr like platform within pakistan where
-          people can put up advertisement for work they want to done and the
-          clients on the other can easily connect and earn some money. (Web,
-          iOS, Android).
+          {{ current.desc }}
         </p>
       </div>
     </div>
-    <Main></Main>
-    <InfoCol></InfoCol>
-    <Multiple></Multiple>
-    <Side />
+    <div v-for="(x, i) in current.section" :key="i + x.type">
+      <Main v-if="x.type == 'main'" :blob="x"></Main>
+      <InfoCol v-if="x.type == 'info'" :blob="x"></InfoCol>
+      <Multiple v-if="x.type == 'multiple'" :blob="x"></Multiple>
+      <Large v-if="x.type == 'large'" :blob="x" />
+      <Side v-if="x.type == 'side'" :blob="x" />
+    </div>
     <div class="spacer"></div>
   </div>
 </template>
@@ -26,22 +31,36 @@ import Main from '~/components/porttemp/main'
 import Multiple from '~/components/porttemp/multiple'
 import InfoCol from '~/components/porttemp/infocol'
 import Side from '~/components/porttemp/side'
+import Large from '~/components/porttemp/onelarge'
 export default {
   components: {
     Multiple,
+    Large,
     Main,
     InfoCol,
     Side,
   },
   data() {
     return {
-      opacity: 0.0666,
+      opacity: 0.6693333333730698,
     }
+  },
+  computed: {
+    current() {
+      const url = this.$route.params.slug
+      const object = this.$store.state.work.data.filter((x) => x.url === url)
+      if (object.length === 0) {
+        return 'error'
+      }
+      console.log(object[0].section)
+      return object[0]
+    },
   },
   methods: {
     handleScroll() {
       // Your scroll handling here
-      const scroll = window.scrollY + 20
+      const scroll = window.scrollY + 200
+      console.log(this.opacity)
       if (scroll < 300) {
         this.opacity = scroll / 300
       } else this.opacity = 1
@@ -121,7 +140,7 @@ export default {
   -webkit-filter: none;
   filter: none;
   width: 100%;
-  height: 75vh;
+  height: 100vh;
 }
 .project-hero {
   position: relative;
@@ -159,17 +178,12 @@ export default {
     transparent 50%,
     rgba(0, 0, 0, 0.08)
   );
-  background-image: linear-gradient(
-      225deg,
-      transparent 50%,
-      rgba(0, 0, 0, 0.08)
-    ),
-    url(https://uploads-ssl.webflow.com/5b6b1bfc681f89d334b144d5/5b6dca153d9b840f1370ab98_lp-hero-2x.jpg);
+
   background-size: auto, cover;
   background-position: 0 0, 50% 50%;
   background-repeat: repeat, no-repeat;
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   background-attachment: scroll, fixed;
 }
 .project-intro {
