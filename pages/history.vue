@@ -1,7 +1,7 @@
 <template>
   <div id="history">
-    <v-row class="d-flex">
-      <div>
+    <v-row>
+      <v-col sm="12" md="6">
         <p class="text-h6">Education</p>
         <v-timeline reverse align-top dense>
           <v-timeline-item
@@ -14,8 +14,8 @@
             <Card :item="item" />
           </v-timeline-item>
         </v-timeline>
-      </div>
-      <div>
+      </v-col>
+      <v-col sm="12" md="6">
         <p class="text-h6">Work Experience</p>
         <v-timeline reverse align-top dense>
           <v-timeline-item
@@ -28,7 +28,7 @@
             <Card :item="item" />
           </v-timeline-item>
         </v-timeline>
-      </div>
+      </v-col>
     </v-row>
   </div>
 </template>

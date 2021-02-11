@@ -4,6 +4,11 @@
   src: local('FuturaBook'), url(~assets/fonts/FuturaBook.ttf) format('truetype');
 }
 @font-face {
+  font-family: 'athelas';
+  src: local('Athelas-Regular'),
+    url(~assets/fonts/Athelas-Regular.ttf) format('truetype');
+}
+@font-face {
   font-family: 'futuraheavy';
   src: local('futuraheavy'),
     url(~assets/fonts/FuturaHeavy.ttf) format('truetype');
