@@ -7,7 +7,7 @@
       </p>
     </div>
 
-    <div class="container">
+    <div data-aos="fade-up" data-aos-offset="300" class="container">
       <img
         v-for="(x, i) in blob.images"
         :key="x + i"
