@@ -5,7 +5,9 @@
       <p>{{ blob.desc }}</p>
     </div>
     <div class="grid container contain">
-      <v-img v-for="x in blob.images" :key="x" :src="x" />
+      <div v-for="x in blob.images" :key="x">
+        <v-img data-aos="fade-up" :src="x" />
+      </div>
     </div>
   </div>
 </template>
