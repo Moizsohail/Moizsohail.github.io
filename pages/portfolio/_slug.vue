@@ -137,7 +137,7 @@ export default {
 #port .v-parallax {
   height: 100vh !important;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   .title {
     width: 80%;
   }

@@ -3,7 +3,7 @@
     <div class="title">
       <h3>{{ blob.title }}</h3>
     </div>
-    <div class="d-flex">
+    <div class="flex">
       <div v-for="(x, i) in blob.column" :key="x.title + i">
         <div class="content">
           <h3 class="minititle">{{ x.title }}</h3>
@@ -54,5 +54,16 @@ export default {
 }
 .content {
   width: 250px;
+}
+.flex {
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  .flex {
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+  }
 }
 </style>
