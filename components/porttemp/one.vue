@@ -6,7 +6,15 @@
     </div>
     <div class="grid container contain">
       <div v-for="x in blob.images" :key="x">
-        <v-img data-aos="fade-up" :src="x" />
+        <v-img data-aos="fade-up" :src="x"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
       </div>
     </div>
   </div>

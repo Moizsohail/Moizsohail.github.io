@@ -20,12 +20,28 @@
             @click="curr = x"
             :class="{ active: current == x }"
           >
-            <img :src="x.image" />
+            <v-img :src="x.image"
+              ><template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row> </template
+            ></v-img>
           </div>
         </div>
       </div>
       <div class="lside vcenter">
-        <img :src="current.image" />
+        <v-img :src="current.image"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
       </div>
     </div>
   </div>
