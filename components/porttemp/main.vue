@@ -3,7 +3,7 @@
     <div class="main-image">
       <img :src="blob.main" />
     </div>
-    <div class="title" :class="{ content: small, center: !small }">
+    <div class="title" :class="{ content: small }">
       <h3>{{ blob.title }}</h3>
       <p>
         {{ blob.desc }}
@@ -130,6 +130,13 @@ p {
   .extra-image {
     position: relative;
     margin: auto;
+  }
+  .content {
+    margin-left: 10px;
+    max-width: 400px;
+  }
+  .content h3 {
+    margin: 0px;
   }
 }
 </style>
