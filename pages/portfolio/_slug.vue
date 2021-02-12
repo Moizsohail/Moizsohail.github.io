@@ -250,6 +250,11 @@ export default {
   font-weight: 300;
   letter-spacing: 0;
 }
+@media screen and (max-width: 400px) {
+  .project-intro .descr {
+    width: 80%;
+  }
+}
 
 .spacer {
   height: 200px;
