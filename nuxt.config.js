@@ -15,14 +15,14 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  
+
   generate: {
     routes: [
       '/portfolio/vlancer',
       '/portfolio/psifi',
       '/portfolio/dementiacare',
-    ]
-  }
+    ],
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~assets/main.css'],
 
