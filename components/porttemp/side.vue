@@ -34,15 +34,7 @@
       </div>
       <div class="lside vcenter">
         <transition name="slide-fade" mode="out-in">
-          <v-img :src="current"
-            ><template v-slot:placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  color="grey lighten-5"
-                ></v-progress-circular>
-              </v-row> </template
-          ></v-img>
+          <img :src="current" class="img" />
         </transition>
       </div>
     </div>
@@ -84,7 +76,7 @@ export default {
 .text h3 {
   font-size: 36px !important;
 }
-.lside img {
+.lside .img {
   width: 100%;
 }
 .slide-fade-enter-active {
