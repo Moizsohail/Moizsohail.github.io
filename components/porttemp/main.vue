@@ -1,15 +1,19 @@
 <template>
-  <div class="d-flex">
+  <div class="d-flex container">
     <div class="main-image">
       <img :src="blob.main" />
     </div>
-    <div class="content">
+    <div class="title" :class="{ content: small, center: !small }">
       <h3>{{ blob.title }}</h3>
       <p>
         {{ blob.desc }}
       </p>
     </div>
-    <div class="extra-image" v-rellax="{ speed: -1.5 }">
+    <div
+      class="extra-image"
+      :class="{ container: small, contained: small }"
+      v-rellax="{ speed: safeSpeed(-1.5) }"
+    >
       <img :src="blob.other" />
     </div>
   </div>
@@ -20,6 +24,26 @@ export default {
     blob: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    small() {
+      if (process.client) {
+        const width = window.innerWidth
+        return width < 800
+      }
+      return false
+    },
+    safeSpeed() {
+      return (speed) => {
+        if (process.client) {
+          const width = window.innerWidth
+          if (width < 800) {
+            return 0
+          }
+        }
+        return speed
+      }
     },
   },
 }
@@ -70,6 +94,14 @@ export default {
   width: 100%;
   box-shadow: 0 28px 42px 0 rgb(255 255 255 / 20%);
 }
+.title {
+  margin-top: 150px;
+}
+.contained {
+  width: 100%;
+  right: unset;
+  margin: auto;
+}
 .main-image {
   margin: auto;
   width: 100%;
@@ -87,5 +119,17 @@ p {
   line-height: 24px;
   font-weight: 300;
   letter-spacing: 0;
+}
+@media screen and (max-width: 800px) {
+  .main-image {
+    display: none;
+  }
+  .d-flex {
+    grid-template-columns: 1fr;
+  }
+  .extra-image {
+    position: relative;
+    margin: auto;
+  }
 }
 </style>

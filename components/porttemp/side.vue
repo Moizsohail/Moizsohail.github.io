@@ -99,4 +99,16 @@ export default {
 .tech:hover {
   border: 2px solid white;
 }
+@media screen and (max-width: 600px) {
+  .d-flex.container {
+    display: block !important;
+  }
+  .vcenter {
+    margin-top: unset;
+  }
+  .lside {
+    margin-top: 40px;
+    height: auto;
+  }
+}
 </style>

@@ -5,10 +5,10 @@
       <div
         class="hero-image-lp"
         :style="{
-          'background-image': ` linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${current.bg})`,
+          'background-image': `linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${current.bg})`,
         }"
       ></div>
-      <div class="project-intro">
+      <div class="project-intro container">
         <h2>{{ current.title }}</h2>
         <p class="descr">
           {{ current.desc }}
@@ -92,6 +92,11 @@ export default {
   margin-bottom: 60px !important;
   max-width: 1000px;
   width: 400px;
+}
+@media screen and (max-width: 400px) {
+  .title {
+    width: 80%;
+  }
 }
 .vcenter {
   display: flex;
@@ -221,14 +226,6 @@ export default {
 .project-intro {
   margin-top: -300px;
   margin-bottom: 80px;
-  padding-right: 24px;
-  padding-left: 24px;
-  display: block;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-
-  max-width: 1280px;
 }
 .project-intro .descr {
   width: 420px;

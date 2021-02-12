@@ -5,7 +5,10 @@
       <p>{{ blob.desc }}</p>
     </div>
     <div class="grid">
-      <v-parallax v-for="x in blob.images" :key="x" :src="x" />
+      <div v-for="x in blob.images" :key="x">
+        <v-parallax class="parallax" :src="x" />
+        <v-img class="img" :src="x" />
+      </div>
     </div>
   </div>
 </template>
@@ -19,3 +22,16 @@ export default {
   },
 }
 </script>
+<style scoped>
+.img {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .parallax {
+    display: none;
+  }
+  .img {
+    display: block !important;
+  }
+}
+</style>

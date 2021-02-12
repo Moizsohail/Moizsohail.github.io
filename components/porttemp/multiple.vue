@@ -1,6 +1,6 @@
 <template>
   <div class="multiple">
-    <div class="title content">
+    <div class="title center">
       <h3>{{ blob.title }}</h3>
       <p>
         {{ blob.desc }}
