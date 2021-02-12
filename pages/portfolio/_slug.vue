@@ -137,6 +137,17 @@ export default {
 #port .v-parallax {
   height: 100vh !important;
 }
+@media screen and (max-width: 400px) {
+  .title {
+    width: 80%;
+  }
+  #port h2 {
+    font-size: 50px;
+  }
+  #port h3 {
+    font-size: 40px;
+  }
+}
 </style>
 <style scoped>
 .project-hero .cover {
