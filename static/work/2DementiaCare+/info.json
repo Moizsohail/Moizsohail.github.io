@@ -5,13 +5,13 @@
     "bg": "https://www.policyforum.labour.org.uk/uploads/editor/images/GettyImages-912073430_small.jpg",
     "title": "DementiaCare+",
     "url": "dementiacare",
-    "desc": "A program to serve the dementia care takers in pakistan.",
+    "desc": "A holistic program to serve the needs of dementia caretakers in pakistan.",
     "section": [
         {
             "type": "main",
             "main": "/work/2DementiaCare+/big.jpg",
             "title": "DementiaCare+ To The Rescue",
-            "desc": "(Add something emotinal here) In this fast moving world, we often neglect the The goal of this project was to provide assistance to the people starting out to be dementia caretakers. ",
+            "desc": "Dementia Caretakers engage in both noble and overwhelming endeavors every day. Being a Dementia Caretaker is a strenous job due to the level of demand and attention required by the patients. The purpose of this application is to provide job-related assistance to the people starting out as dementia caretakers.",
             "other": "/work/2DementiaCare+/mockuper (4).png"
         },
         {
@@ -21,17 +21,17 @@
             "column": [
                 {
                     "title": "Community Forum",
-                    "desc": "We know that starting to be a caretaker becomes more challenging when you do not know what you are doing. So to help you in the process dementiacare+ connects you with a community of helpful people to assist you in your journey.",
+                    "desc": "We understand that starting out as a caretaker for dementia patients is challenging, especially when you are not aware of the intricate care that patients need. Dementiacare’s community feature connects you with myriad of helpful people who can assist you with the job.",
                     "icon": "fa fa-users"
                 },
                 {
                     "title": "Patient Tracking",
-                    "desc": "One of the biggest problems highlighted was the issue of patients wandering off. So to resolve the issue, we came up with a tracking mechanism. All you have to do is to install the app on the android phone or a smartwatch. And in case the patient wanders off, you can easily track him/her down.",
+                    "desc": "One of the primary issues associated with dementia care is the frequent risk of patients wandering off. To resolve ghe problem, we have introduced a jifty system of tracking mechanism. It allows you to track the location of the patients through android or smartwatch.",
                     "icon": "fa fa-map-marker"
                 },
                 {
                     "title": "Find Help",
-                    "desc": "Another issue that we intended to fix was to bridge the gap between professionals and individual caretakers. This is where the dementiacare+ comes in. The app hosts a list of verified professional which are filtered according to your location. ",
+                    "desc": "Taking care of individual dementia patients at home is difficult. Dementiacare+ seeks to to make the task easier by bridging the gap between professional and individual caretakers. The app hosts a list of verified professional which are filtered according to your location. ",
                     "icon": "fa fa-phone"
                 }
             ]
@@ -48,7 +48,7 @@
         {
             "type": "multiple",
             "title": "DementiaCare+",
-            "desc": "To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.",
+            "desc": "",
             "images": [
                 "/work/2DementiaCare+/shotsnapp-1613044832.261.png",
                 "/work/2DementiaCare+/shotsnapp-1613044285.463.png",
