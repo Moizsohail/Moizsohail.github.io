@@ -183,7 +183,9 @@ export default {
   color: #595959;
   line-height: 28px;
 }
-
+.min {
+  display: none;
+}
 @media screen and (max-width: 400px) {
   .max {
     display: none;
