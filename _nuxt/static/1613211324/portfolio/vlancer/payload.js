@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/portfolio/vlancer", {data:[{}],fetch:[],mutations:[]});
