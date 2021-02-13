@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="one">
     <div class="title center">
       <h3>{{ blob.title }}</h3>
       <p>{{ blob.desc }}</p>
@@ -29,4 +29,9 @@ export default {
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.one {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+</style>

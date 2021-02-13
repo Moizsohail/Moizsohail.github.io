@@ -20,15 +20,18 @@
             "column": [
                 {
                     "title": "Messaging",
-                    "desc": "info"
+                    "desc": "Utilizing the socket, a one-one chat was enabled to allow two parties to communicate which each other before they carry out a transaction",
+                    "icon": "fas fa-comment-dollar"
                 },
                 {
-                    "title": "Messaging",
-                    "desc": "info"
+                    "title": "Wallet",
+                    "desc": "A personal wallet was created to allow people to store and easily out transactions. An overview was also given in the end",
+                    "icon": "fas fa-wallet"
                 },
                 {
-                    "title": "Messaging",
-                    "desc": "info"
+                    "title": "Live Notification",
+                    "desc": "A notification system was developed to quickly notify the people about it.",
+                    "icon": "fas fa-bell"
                 }
             ]
         },
