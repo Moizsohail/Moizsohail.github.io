@@ -6,6 +6,7 @@
     <div class="flex">
       <div v-for="(x, i) in blob.column" :key="x.title + i">
         <div class="content">
+          <i class="icon" :class="x.icon"> </i>
           <h3 class="minititle">{{ x.title }}</h3>
           <p>{{ x.desc }}</p>
         </div>
@@ -33,9 +34,12 @@ export default {
 }
 </script>
 <style scoped>
+.icon {
+  font-size: 50px;
+}
 .infocol {
   /* display: flex; */
-  margin: 400px auto 200px auto;
+  margin: 200px auto 200px auto;
   text-align: center;
 }
 .title h3 {
@@ -43,7 +47,8 @@ export default {
 }
 .minititle {
   font-family: athelas !important;
-  font-size: 1em !important;
+  margin-top: 15px;
+  font-size: 1.2em !important;
   font-weight: bold !important;
   letter-spacing: 0px !important;
 }

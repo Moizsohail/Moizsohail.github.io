@@ -10,25 +10,29 @@
         {
             "type": "main",
             "main": "/work/2DementiaCare+/big.jpg",
-            "title": "Tailored For Pakistan",
-            "desc": "The goal of this project was to introduce a user friendly platform for the Pakistani people. This platform has the potential of allowing people to earn some extra money above their daily money.",
+            "title": "DementiaCare+ To The Rescue",
+            "desc": "(Add something emotinal here) In this fast moving world, we often neglect the The goal of this project was to provide assistance to the people starting out to be dementia caretakers. ",
             "other": "/work/2DementiaCare+/mockuper (4).png"
         },
         {
             "type": "info",
             "title": "Features",
+            "icon": "true",
             "column": [
                 {
-                    "title": "Messaging",
-                    "desc": "info"
+                    "title": "Community Forum",
+                    "desc": "We know that starting to be a caretaker becomes more challenging when you do not know what you are doing. So to help you in the process dementiacare+ connects you with a community of helpful people to assist you in your journey.",
+                    "icon": "fa fa-users"
                 },
                 {
-                    "title": "Messaging",
-                    "desc": "info"
+                    "title": "Patient Tracking",
+                    "desc": "One of the biggest problems highlighted was the issue of patients wandering off. So to resolve the issue, we came up with a tracking mechanism. All you have to do is to install the app on the android phone or a smartwatch. And in case the patient wanders off, you can easily track him/her down.",
+                    "icon": "fa fa-map-marker"
                 },
                 {
-                    "title": "Messaging",
-                    "desc": "info"
+                    "title": "Find Help",
+                    "desc": "Another issue that we intended to fix was to bridge the gap between professionals and individual caretakers. This is where the dementiacare+ comes in. The app hosts a list of verified professional which are filtered according to your location. ",
+                    "icon": "fa fa-phone"
                 }
             ]
         },
@@ -43,7 +47,7 @@
         },
         {
             "type": "multiple",
-            "title": "Vlancer For Android",
+            "title": "DementiaCare+",
             "desc": "To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.",
             "images": [
                 "/work/2DementiaCare+/shotsnapp-1613044832.261.png",

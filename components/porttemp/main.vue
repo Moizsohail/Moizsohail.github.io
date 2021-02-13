@@ -124,10 +124,7 @@ p {
   font-weight: 300;
   letter-spacing: 0;
 }
-@media screen and (max-width: 1000px) {
-  .d-flex {
-  }
-}
+
 @media screen and (max-width: 800px) {
   .main-image {
     display: none;
