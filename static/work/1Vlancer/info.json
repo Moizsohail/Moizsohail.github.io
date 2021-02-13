@@ -30,7 +30,7 @@
                 },
                 {
                     "title": "Live Notification",
-                    "desc": "A notification system was developed to quickly notify the people about it.",
+                    "desc": "A notification system was developed to quickly notify people about any updates.",
                     "icon": "fas fa-bell"
                 }
             ]
@@ -54,7 +54,8 @@
             "desc": "",
             "tech": [
                 "Flutter",
-                "Strapi"
+                "Strapi",
+                "SocketIO"
             ]
         }
     ]
