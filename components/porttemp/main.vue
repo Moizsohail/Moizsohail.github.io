@@ -53,9 +53,7 @@ export default {
   max-width: 1280px;
   margin: auto;
   display: grid !important;
-  grid-template-columns: 1fr 300px auto;
-  grid-column-gap: 100px;
-  margin-bottom: 200px;
+  grid-template-columns: 1fr auto;
 }
 .extra-image {
   position: absolute;
@@ -95,7 +93,13 @@ export default {
   box-shadow: 0 28px 42px 0 rgb(255 255 255 / 20%);
 }
 .title {
+  margin: auto;
+  margin-left: 2vw;
+  margin-right: 2vw;
+
   margin-top: 150px;
+  width: unset;
+  max-width: 300px;
 }
 .contained {
   width: 100%;
@@ -119,6 +123,10 @@ p {
   line-height: 24px;
   font-weight: 300;
   letter-spacing: 0;
+}
+@media screen and (max-width: 1000px) {
+  .d-flex {
+  }
 }
 @media screen and (max-width: 800px) {
   .main-image {
