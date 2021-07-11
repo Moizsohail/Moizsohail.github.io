@@ -16,7 +16,7 @@ export const state = () => ({
       title: 'Firebase',
       desc:
         'Firebase is a Backend-as-a-Service (Baas). It provides developers with a variety of tools and services to help them develop quality apps, grow their user base, and earn profit. \n\n Few of its most popular tools are authentication, realtime database, hosting, testlab, and notifications support.',
-      image: '/tech/1_ZBSX06fzK-gFy_Cj3FwzUg.png',
+      image: '/tech/firebase.jpg',
     },
     {
       title: 'Node Js',

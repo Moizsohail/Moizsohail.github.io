@@ -1,7 +1,12 @@
 <template>
   <div id="port">
     <div class="project-hero">
-      <div class="cover" :style="{ opacity: opacity }"></div>
+      <div
+        class="cover"
+        :style="{
+          opacity: opacity,
+        }"
+      ></div>
       <div
         class="hero-image-lp"
         :style="{
@@ -9,7 +14,9 @@
         }"
       ></div>
       <div class="project-intro container">
-        <h2>{{ current.title }}</h2>
+        <h2>
+          {{ current.title }}
+        </h2>
         <p class="descr">
           {{ current.desc }}
         </p>
@@ -84,21 +91,20 @@ export default {
       },
     ],
   },
-  methods: {
-    handleScroll() {
-      // Your scroll handling here
-      const scroll = window.scrollY + 200
-      console.log(this.opacity)
-      if (scroll < 300) {
-        this.opacity = scroll / 300
-      } else this.opacity = 1
-    },
-  },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      // Your scroll handling here
+      const scroll = window.scrollY + 200
+      if (scroll < 300) {
+        this.opacity = scroll / 300
+      } else this.opacity = 1
+    },
   },
 }
 </script>
