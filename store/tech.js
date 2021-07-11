@@ -19,6 +19,12 @@ export const state = () => ({
       image: '/tech/firebase.jpg',
     },
     {
+      title: 'NuxtJs',
+      desc:
+        'Nuxt.js is a free and open source web application framework based on Vue.js, Node.js, Webpack and Babel.js. Nuxt is inspired by Next.js, which is a framework of similar purpose, based on React.js. The framework is advertised as a "meta-framework for universal applications"',
+      image: '/tech/nuxt.png',
+    },
+    {
       title: 'Node Js',
       desc:
         'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the Chrome V8 engine and executes JavaScript code outside a web browser.',

@@ -15,9 +15,9 @@
               <v-img
                 v-ripple
                 :src="item.img[0]"
-                @click="currObj = item"
                 aspect-ratio="0.7"
                 class="grey darken-4"
+                @click="currObj = item"
               >
                 <template v-slot:placeholder>
                   <v-row
