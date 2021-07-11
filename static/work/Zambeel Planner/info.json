@@ -1,8 +1,6 @@
 {
-    "img": [
-        "..\\work\\Zambeel Planner\\imagezscm.png"
-    ],
-    "title": "Zambeel Planner",
-    "url": "A fiverr like startup for the Pakistani graduates.",
-    "desc": "https://moizsohail.github.io/"
+  "img": ["..\\work\\Zambeel Planner\\imagezscm.jpg"],
+  "title": "Zambeel Planner",
+  "url": "A fiverr like startup for the Pakistani graduates.",
+  "desc": "https://moizsohail.github.io/"
 }
