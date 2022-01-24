@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@font-face {
+  font-family: 'futurabook';
+  font-display: swap;
+  src: local('FuturaBook'), url(~assets/fonts/FuturaBook.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'athelas';
+  font-display: swap;
+  src: local('Athelas-Regular'),
+    url(~assets/fonts/Athelas-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'futuraheavy';
+  font-display: swap;
+  src: local('futuraheavy'),
+    url(~assets/fonts/FuturaHeavy.ttf) format('truetype');
+}
+p {
+  margin: 0 !important;
+  font-display: swap;
+  box-sizing: border-box;
+}
+
+* {
+  --primary: #00ff00;
+}
