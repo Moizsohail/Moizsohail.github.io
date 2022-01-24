@@ -25,6 +25,24 @@ export const state = () => ({
       image: '/tech/nuxt.png',
     },
     {
+      title: 'NextJs',
+      desc:
+        'Next.js is an open-source development framework build on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites.',
+      image: '/tech/nextjs.png',
+    },
+    {
+      title: 'GoogleAppEngine',
+      desc:
+        'Nuxt.js is a free and open source web application framework based on Vue.js, Node.js, Webpack and Babel.js. Nuxt is inspired by Next.js, which is a framework of similar purpose, based on React.js. The framework is advertised as a "meta-framework for universal applications"',
+      image: '/tech/appengine.png',
+    },
+    {
+      title: 'WordPress',
+      desc:
+        'WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database.',
+      image: '/tech/wordpress.jpeg',
+    },
+    {
       title: 'Node Js',
       desc:
         'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the Chrome V8 engine and executes JavaScript code outside a web browser.',

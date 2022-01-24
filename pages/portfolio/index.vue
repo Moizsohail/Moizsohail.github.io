@@ -11,7 +11,7 @@
             class="col-md-4 col-lg-3 col-sm-6 col-xs-12"
             :style="`--index: ${i};`"
           >
-            <div class="list-complete-item" @click="goto(item)" elevation="5">
+            <div class="list-complete-item" elevation="5" @click="goto(item)">
               <v-img
                 v-ripple
                 :src="item.img[0]"
@@ -33,26 +33,6 @@
                 </template>
               </v-img>
               <p class="text-h3 top-title">{{ item.title }}</p>
-              <!-- <p class="text-p bottom-tags">{{ item.tags | toString }}</p> -->
-              <!-- <v-img
-                :src="item.img"
-                aspect-ratio="0.7"
-                class="grey lighten-2 overlay"
-                :class="{ start: item.clicked }"
-              >
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular
-                      indeterminate
-                      color="grey lighten-5"
-                    ></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img> -->
             </div>
           </div>
         </div>

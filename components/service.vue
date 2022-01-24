@@ -48,15 +48,17 @@
             <div class="selected-service col-lg-7 col-md-8 col-sm-12 col-12">
               <div class="row">
                 <div
-                  v-for="x in currentskills"
-                  :key="x.icon"
+                  v-for="skill in currentskills"
+                  :key="skill.icon"
                   class="col-md-6 col-sm-6 col-12 skill"
                 >
                   <div class="icon">
-                    <i :class="x.icon" aria-hidden="true">{{ x.it }} </i>
+                    <i :class="skill.icon" aria-hidden="true"
+                      >{{ skill.it }}
+                    </i>
                   </div>
-                  <h4>{{ x.title }}</h4>
-                  <p>{{ x.desc }}</p>
+                  <h4>{{ skill.title }}</h4>
+                  <p>{{ skill.desc }}</p>
                 </div>
               </div>
             </div>
@@ -86,17 +88,23 @@ export default {
         },
         {
           head: 'UI/UX Design',
-          title: 'HTML/CSS Development',
-          icon: 'fab fa-html5',
+          title: 'Wordpress',
+          icon: 'fab fa-wordpress',
           desc: '3 Projects',
         },
         {
           head: 'UI/UX Design',
-          title: 'Figma/Balsamiq Prototyping',
-          icon: 'fab fa-figma',
+          title: 'Next/React Development',
+          icon: 'fab fa-react',
           desc: '3 Projects',
         },
 
+        {
+          head: 'Backend Development',
+          title: 'Strapi JS',
+          icon: 'fas fa-server',
+          desc: '1 Project',
+        },
         {
           head: 'Backend Development',
           title: 'Node JS',
@@ -115,14 +123,24 @@ export default {
           icon: 'fab fa-digital-ocean',
         },
         {
-          head: 'Automation',
+          head: 'Automation & GUI',
           title: 'Selenium',
           icon: 'fas fa-spider',
         },
         {
-          head: 'Automation',
+          head: 'Automation & GUI',
           title: 'Pyautogui',
           icon: 'fas fa-robot',
+        },
+        {
+          head: 'Automation & GUI',
+          title: 'Tkinter',
+          icon: 'fas fa-window-maximize',
+        },
+        {
+          head: 'Automation & GUI',
+          title: 'Py Qt5',
+          icon: 'fas fa-desktop',
         },
         {
           head: 'Deep Learning',

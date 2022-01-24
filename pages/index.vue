@@ -8,9 +8,9 @@
             <vue-typed-js
               class="coding"
               :strings="strings"
-              :typeSpeed="30"
-              :backSpeed="10"
-              cursorChar="_"
+              :type-speed="30"
+              :back-speed="10"
+              cursor-char="_"
             >
               <pre><code>> <span class="typing"></span></code></pre>
             </vue-typed-js>
@@ -33,10 +33,10 @@
             </v-card>
           </div>
           <v-container
-            class="about-text"
             v-rellax="{
               speed: safeSpeed(-2.2),
             }"
+            class="about-text"
           >
             <h2 class="text-h3 mb-5">Hi! I am Moiz Sohail</h2>
             <p class="text-body-1 mt-5">
@@ -65,8 +65,8 @@
       </section>
       <section class="portfolio">
         <div class="portfolio-title">
-          <h2 class="text-overline" v-rellax="{ speed: 0 }">Portfolio</h2>
-          <h2 class="text-h3" v-rellax="{ speed: 0 }">
+          <h2 v-rellax="{ speed: 0 }" class="text-overline">Portfolio</h2>
+          <h2 v-rellax="{ speed: 0 }" class="text-h3">
             Checkout a few of my projects
           </h2>
         </div>
@@ -78,10 +78,10 @@
             :class="{ 'flex-row-reverse': i % 2 }"
           >
             <v-card
+              v-rellax="{ speed: safeSpeed(1.5), 'mobile-speed': 0 }"
               elevation="2"
               class="about-image darken rellax"
               :style="{ 'margin-top': i * 50 + 100 + 'px' }"
-              v-rellax="{ speed: safeSpeed(1.5), 'mobile-speed': 0 }"
             >
               <v-img
                 :src="`https://picsum.photos/1024/1024?random=${i}`"
@@ -96,11 +96,11 @@
               ></v-img>
             </v-card>
             <v-container
+              v-rellax="{ speed: safeSpeed(-0.5), 'mobile-speed': 0 }"
               class="about-text"
               :class="{ left: !(i % 2) }"
-              v-rellax="{ speed: safeSpeed(-0.5), 'mobile-speed': 0 }"
             >
-              <h2 class="text-overline" v-rellax="{ speed: 0 }">
+              <h2 v-rellax="{ speed: 0 }" class="text-overline">
                 {{ x.head }}
               </h2>
               <h2 class="text-h3 mb-5">{{ x.title }}</h2>
@@ -116,7 +116,7 @@
           </v-container>
         </div>
       </section>
-      <section class="capabilities" v-rellax="{ speed: 0 }">
+      <section v-rellax="{ speed: 0 }" class="capabilities">
         <Services />
       </section>
       <section v-rellax="{ speed: 0 }" class="contact">
@@ -135,28 +135,6 @@ export default {
   components: {
     SocialBar,
     Services,
-  },
-  head: {
-    title: 'Moiz Sohail',
-    meta: [
-      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Make it work, make it right, make it fast.',
-      },
-    ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href:
-          'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
-      },
-    ],
   },
   data() {
     return {
@@ -206,7 +184,6 @@ export default {
     strings() {
       if (process.client) {
         const width = window.innerWidth
-        console.log(width)
         if (width < 400) {
           return [
             'World!',
@@ -243,6 +220,28 @@ export default {
         return ['']
       }
     },
+  },
+  head: {
+    title: 'Moiz Sohail',
+    meta: [
+      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Make it work, make it right, make it fast.',
+      },
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href:
+          'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
+      },
+    ],
   },
 }
 </script>
