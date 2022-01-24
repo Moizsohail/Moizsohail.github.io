@@ -16,29 +16,9 @@
     <v-navigation-drawer v-model="leftDrawer" temporary fixed>
       <Profile></Profile>
     </v-navigation-drawer>
-    <!-- 
-    <v-navigation-drawer
-      id="imagenav"
-      absolute
-      dark
-      src="https://digitalsynopsis.com/wp-content/uploads/2019/08/beautiful-illustrations-design-inspiration-37.png"
-      v-model="rightDrawer"
-      right
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item v-for="([title, link], i) in navLinks" :key="i" link>
-          <v-list-item-icon> </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ title }}{{ link }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
     <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; Jan 2022</span>
     </v-footer>
   </v-app>
 </template>

@@ -19,7 +19,7 @@
                 class="grey darken-4"
                 @click="currObj = item"
               >
-                <template v-slot:placeholder>
+                <template #placeholder>
                   <v-row
                     class="fill-height ma-0"
                     align="center"

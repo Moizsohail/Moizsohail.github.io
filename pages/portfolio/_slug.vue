@@ -58,17 +58,6 @@ export default {
       opacity: 0.6693333333730698,
     }
   },
-  computed: {
-    current() {
-      const url = this.$route.params.slug
-      const object = this.$store.state.work.data.filter((x) => x.url === url)
-      if (object.length === 0) {
-        return 'error'
-      }
-
-      return object[0]
-    },
-  },
   head: {
     title: 'Portfolio',
     meta: [
@@ -90,6 +79,18 @@ export default {
       },
     ],
   },
+  computed: {
+    current() {
+      const url = this.$route.params.slug
+      const object = this.$store.state.work.data.filter((x) => x.url === url)
+      if (object.length === 0) {
+        return 'error'
+      }
+
+      return object[0]
+    },
+  },
+
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
   },

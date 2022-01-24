@@ -88,7 +88,7 @@
                 height="400"
                 width="400"
                 class="grey darken-4"
-                ><template v-slot:placeholder>
+                ><template #placeholder>
                   <v-skeleton-loader
                     type="image,image,image"
                     min-height="400"
@@ -169,6 +169,27 @@ export default {
       ],
     }
   },
+  head: {
+    title: 'Moiz Sohail',
+    meta: [
+      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Make it work, make it right, make it fast.',
+      },
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
+      },
+    ],
+  },
   computed: {
     safeSpeed() {
       return (speed) => {
@@ -220,27 +241,6 @@ export default {
         return ['']
       }
     },
-  },
-  head: {
-    title: 'Moiz Sohail',
-    meta: [
-      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Make it work, make it right, make it fast.',
-      },
-    ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
-      },
-    ],
   },
 }
 </script>
