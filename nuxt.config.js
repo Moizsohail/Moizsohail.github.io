@@ -17,6 +17,7 @@ export default {
   },
 
   generate: {
+    dir: 'docs',
     routes: [
       '/portfolio/vlancer',
       '/portfolio/psifi',
@@ -26,6 +27,7 @@ export default {
       '/portfolio/surveybot',
     ],
   },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~assets/main.css'],
 
