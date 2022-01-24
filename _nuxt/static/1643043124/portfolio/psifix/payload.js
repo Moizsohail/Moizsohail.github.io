@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/portfolio/psifix", {data:[{_img:{}}],fetch:{},mutations:[]});

@@ -1,0 +1,38 @@
+{
+  "img": ["/work/4SurveyBot/front.jpg"],
+  "bg": "/work/4SurveyBot/survey-feature.jpg",
+  "title": "SurveyBot",
+  "url": "surveybot",
+  "desc": "IT director of Spades",
+  "section": [
+    {
+      "type": "main",
+      "main": "/work/4SurveyBot/main.jpg",
+      "title": "About Survey Bot",
+      "desc": "Are you tired of begging your friends to fill out a survey? Or maybe (like me) you realize that you have a project due tonight, and for that you need quantitative researched data. But you don't have that so what do you do? ",
+      "other": ""
+    },
+    {
+      "type": "side",
+      "contained": "false",
+      "title": "Presenting surveyBot",
+      "desc": "Too smoothen out the workflow, spades also have an android app to reach out as many people as possible.",
+      "images": ["/work/4SurveyBot/mockuper.png"]
+    },
+    {
+      "type": "side",
+      "contained":"false",
+      "title": "What does it do?",
+      "desc": "I know most of you have used google forms and you must know that whenever you fill out a survey all the records are stored in an excel(spreadsheet) file which you can download and do whatever you want to with it. \n This time you dont have to fill out a survey, instead you create a form on this webapp(I mean just fill out the question you are going to ask).",
+      "images": [
+        "/work/4SurveyBot/photo-1504868584819-f8e8b4b6d7e3.jpeg"
+      ]
+    },
+    {
+      "type": "tech",
+      "title": "Technology",
+      "desc": "",
+      "tech": ["NuxtJs"]
+    }
+  ]
+}

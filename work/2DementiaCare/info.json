@@ -1,0 +1,63 @@
+{
+  "img": ["/work/2DementiaCare/image.jpg"],
+  "bg": "https://www.policyforum.labour.org.uk/uploads/editor/images/GettyImages-912073430_small.jpg",
+  "title": "DementiaCare+",
+  "url": "dementiacare",
+  "desc": "A holistic program to serve the needs of dementia caretakers in pakistan.",
+  "section": [
+    {
+      "type": "main",
+      "main": "/work/2DementiaCare/big.jpg",
+      "title": "DementiaCare+ To The Rescue",
+      "desc": "Dementia Caretakers engage in both noble and overwhelming endeavors every day. Being a Dementia Caretaker is a strenous job due to the level of demand and attention required by the patients. The purpose of this application is to provide job-related assistance to the people starting out as dementia caretakers.",
+      "other": "/work/2DementiaCare/mockuper_4.jpg"
+    },
+    {
+      "type": "info",
+      "title": "Features",
+      "icon": "true",
+      "column": [
+        {
+          "title": "Community Forum",
+          "desc": "We understand that starting out as a caretaker for dementia patients is challenging, especially when you are not aware of the intricate care that patients need. Dementiacare’s community feature connects you with myriad of helpful people who can assist you with the job.",
+          "icon": "fa fa-users"
+        },
+        {
+          "title": "Patient Tracking",
+          "desc": "One of the primary issues associated with dementia care is the frequent risk of patients wandering off. To resolve ghe problem, we have introduced a jifty system of tracking mechanism. It allows you to track the location of the patients through android or smartwatch.",
+          "icon": "fa fa-map-marker"
+        },
+        {
+          "title": "Find Help",
+          "desc": "Taking care of individual dementia patients at home is difficult. Dementiacare+ seeks to to make the task easier by bridging the gap between professional and individual caretakers. The app hosts a list of verified professional which are filtered according to your location.",
+          "icon": "fa fa-phone"
+        }
+      ]
+    },
+    {
+      "type": "parallax",
+      "title": "",
+      "desc": "",
+      "images": [
+        "/work/2DementiaCare/mockuper_6.jpg",
+        "/work/2DementiaCare/mockuper_7.jpg"
+      ]
+    },
+    {
+      "type": "multiple",
+      "title": "DementiaCare+",
+      "desc": "",
+      "images": [
+        "/work/2DementiaCare/shotsnapp-1613044832.261.png",
+        "/work/2DementiaCare/shotsnapp-1613044285.463.png",
+        "/work/2DementiaCare/shotsnapp-1613044768.013.png"
+      ]
+    },
+    {
+      "type": "tech",
+      "title": "Technology",
+      "desc": "",
+      "tech": ["Flutter", "Firebase", "Socket IO"]
+    }
+  ]
+}
