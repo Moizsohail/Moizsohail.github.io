@@ -1,0 +1,36 @@
+{
+  "img": ["/work/5Educative/front.png"],
+  "bg": "/work/5Educative/bg.jpg",
+  "title": "Educative",
+  "url": "educative",
+  "desc": "Software Engineer | Currently Employed",
+  "section": [
+    {
+      "type": "main",
+      "main": "/work/5Educative/main.png",
+      "title": "About Survey Bot",
+      "desc": "Are you tired of begging your friends to fill out a survey? Or maybe (like me) you realize that you have a project due tonight, and for that you need quantitative researched data. But you don't have that so what do you do? ",
+      "other": "/work/5Educative/other.png"
+    },
+    {
+      "type": "side",
+      "contained": "false",
+      "title": "Presenting surveyBot",
+      "desc": "Too smoothen out the workflow, spades also have an android app to reach out as many people as possible.",
+      "images": ["/work/4SurveyBot/mockuper.png"]
+    },
+    {
+      "type": "one",
+      "contained": "false",
+      "title": "What does it do?",
+      "desc": "I know most of you have used google forms and you must know that whenever you fill out a survey all the records are stored in an excel(spreadsheet) file which you can download and do whatever you want to with it. \n This time you dont have to fill out a survey, instead you create a form on this webapp(I mean just fill out the question you are going to ask).",
+      "images": ["/work/5Educative/ipad.png"]
+    },
+    {
+      "type": "tech",
+      "title": "Technology",
+      "desc": "",
+      "tech": ["NextJs", "GoogleAppEngine", "React Native"]
+    }
+  ]
+}
