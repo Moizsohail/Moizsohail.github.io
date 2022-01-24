@@ -30,7 +30,7 @@
       "type": "tech",
       "title": "Technology",
       "desc": "",
-      "tech": ["NextJs", "GoogleAppEngine"]
+      "tech": ["NextJs", "GoogleAppEngine", "React Native"]
     }
   ]
 }

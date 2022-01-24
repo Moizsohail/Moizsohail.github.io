@@ -53,9 +53,9 @@ export default {
   },
   computed: {
     technology() {
-      return this.$store.state.tech.tech.filter((x) =>
-        this.blob.tech.includes(x.title)
-      )
+      return this.$store.state.tech.tech
+        .filter((x) => this.blob.tech.includes(x.title))
+        .slice(0, 3)
     },
     current() {
       if (this.curr.title) {

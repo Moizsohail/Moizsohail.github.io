@@ -408,7 +408,7 @@ i {
   content: '';
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.999);
+  background: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
 }
@@ -429,8 +429,8 @@ i {
 .second {
   position: relative;
   background: #171819
-    url('https://wallpaperhunt.net/save/wallpaper?f=24577-4k-minimalist-wallpaper-3840x2160-158074280832820.jpg')
-    no-repeat fixed top;
+    url('https://images6.alphacoders.com/120/thumb-1920-1205444.jpg') no-repeat
+    fixed top;
   background-size: cover;
 }
 

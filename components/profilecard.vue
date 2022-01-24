@@ -45,9 +45,9 @@
       </div>
       <v-divider class="mx-auto" inset></v-divider>
       <div class="download-cv">
-        <p class="text-overline">
+        <a class="text-overline" href="/moiz.pdf" target="__blank">
           <v-icon small>mdi-download</v-icon> Download CV
-        </p>
+        </a>
       </div>
     </v-card>
   </v-col>
@@ -120,6 +120,10 @@ export default {
 #profileinfo {
   text-align: center;
   padding: 0px 20px;
+}
+.download-cv a {
+  text-decoration: none;
+  color: white;
 }
 .infotable {
   padding: 15px 40px;
