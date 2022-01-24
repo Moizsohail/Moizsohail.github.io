@@ -17,11 +17,11 @@
             v-for="x in blob.images"
             :key="x"
             class="tech vcenter"
-            @click="curr = x"
             :class="{ active: current == x }"
+            @click="curr = x"
           >
             <v-img :src="x"
-              ><template v-slot:placeholder>
+              ><template #placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">
                   <v-progress-circular
                     indeterminate
@@ -34,7 +34,7 @@
       </div>
       <div class="lside vcenter">
         <transition name="slide-fade" mode="out-in">
-          <img :src="current" class="img" />
+          <img :src="$img(current, { format: 'webp' })" class="img" />
         </transition>
       </div>
     </div>
@@ -42,16 +42,16 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      curr: '',
-    }
-  },
   props: {
     blob: {
       required: true,
       type: Object,
     },
+  },
+  data() {
+    return {
+      curr: '',
+    }
   },
   computed: {
     current() {

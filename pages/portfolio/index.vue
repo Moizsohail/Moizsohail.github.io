@@ -12,12 +12,13 @@
             :style="`--index: ${i};`"
           >
             <div class="list-complete-item" elevation="5" @click="goto(item)">
-              <nuxt-img
+              <v-img
                 v-ripple
                 format="webp"
-                :src="item.img[0]"
+                :src="$img(item.img[0], { format: 'webp' })"
+                aspect-ratio="0.7"
                 fit="cover"
-                class="grey darken-4 cover-image"
+                class="grey darken-4"
                 @click="currObj = item"
               >
                 <template #placeholder>
@@ -32,7 +33,7 @@
                     ></v-progress-circular>
                   </v-row>
                 </template>
-              </nuxt-img>
+              </v-img>
               <p class="text-h3 top-title">{{ item.title }}</p>
             </div>
           </div>
@@ -211,14 +212,10 @@ span:hover:after {
 .list-complete-item {
   transition: transform 0.5s;
   overflow: hidden;
-  aspect-ratio: 0.7;
   cursor: pointer;
   flex: 25%;
   position: relative;
   padding: 10px;
-}
-.cover-image {
-  height: 100%;
 }
 /* @keyframes fade-in {
   0% {

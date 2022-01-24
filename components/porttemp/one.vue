@@ -6,8 +6,8 @@
     </div>
     <div class="grid container contain">
       <div v-for="x in blob.images" :key="x">
-        <v-img data-aos="fade-up" :src="x"
-          ><template v-slot:placeholder>
+        <v-img data-aos="fade-up" :src="$img(x, { format: 'webp' })"
+          ><template #placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
                 indeterminate

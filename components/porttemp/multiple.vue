@@ -13,13 +13,19 @@
         :key="x + i"
         class="img"
         :class="{ odd: i % 3 == 1 }"
-        :src="x"
+        :src="$img(x, { format: 'webp' })"
       />
     </div>
   </div>
 </template>
 <script>
 export default {
+  props: {
+    blob: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       imgs: [
@@ -31,12 +37,6 @@ export default {
         '/work/1Vlancer/shotsnapp-1612981221.31.png',
       ],
     }
-  },
-  props: {
-    blob: {
-      type: Object,
-      required: true,
-    },
   },
 }
 </script>

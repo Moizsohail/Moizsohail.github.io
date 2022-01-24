@@ -17,11 +17,11 @@
             v-for="x in technology"
             :key="x.title"
             class="tech vcenter"
-            @click="curr = x"
             :class="{ active: current == x }"
+            @click="curr = x"
           >
-            <v-img :src="x.image"
-              ><template v-slot:placeholder>
+            <v-img :src="$img(x.image, { format: 'webp' })"
+              ><template #placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">
                   <v-progress-circular
                     indeterminate
@@ -33,23 +33,23 @@
         </div>
       </div>
       <div class="lside vcenter">
-        <img :src="current.image" />
+        <img :src="$img(current.image, { format: 'webp' })" />
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      curr: {},
-    }
-  },
   props: {
     blob: {
       required: true,
       type: Object,
     },
+  },
+  data() {
+    return {
+      curr: {},
+    }
   },
   computed: {
     technology() {

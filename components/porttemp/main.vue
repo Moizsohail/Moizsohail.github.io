@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex container">
     <div class="main-image">
-      <img :src="blob.main" />
+      <img :src="$img(blob.main, { format: 'webp' })" />
     </div>
     <div class="title" :class="{ content: small }">
       <h3>{{ blob.title }}</h3>
@@ -10,11 +10,11 @@
       </p>
     </div>
     <div
+      v-rellax="{ speed: safeSpeed(-1.5) }"
       class="extra-image"
       :class="{ container: small, contained: small }"
-      v-rellax="{ speed: safeSpeed(-1.5) }"
     >
-      <img :src="blob.other" />
+      <img :src="$img(blob.other, { format: 'webp' })" />
     </div>
   </div>
 </template>

@@ -16,6 +16,12 @@
 </template>
 <script>
 export default {
+  props: {
+    blob: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       info: [
@@ -24,12 +30,6 @@ export default {
         { title: 'Easy Paisa Transaction', decr: 'Platform' },
       ],
     }
-  },
-  props: {
-    blob: {
-      type: Object,
-      required: true,
-    },
   },
 }
 </script>

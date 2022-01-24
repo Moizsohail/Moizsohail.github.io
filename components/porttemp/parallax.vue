@@ -6,8 +6,8 @@
     </div>
     <div class="grid">
       <div v-for="x in blob.images" :key="x">
-        <v-parallax class="parallax" :src="x"
-          ><template v-slot:placeholder>
+        <v-parallax class="parallax" :src="$img(x, { format: 'webp' })"
+          ><template #placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
                 indeterminate
@@ -15,8 +15,8 @@
               ></v-progress-circular>
             </v-row> </template
         ></v-parallax>
-        <v-img class="img" :src="x"
-          ><template v-slot:placeholder>
+        <v-img class="img" :src="$img(x, { format: 'webp' })"
+          ><template #placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
                 indeterminate
