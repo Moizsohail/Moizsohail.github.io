@@ -1,5 +1,5 @@
 <template>
-  <v-col class="pa-0" id="profileinfo">
+  <v-col id="profileinfo" class="pa-0">
     <v-card class="mx-auto pt-5" tile>
       <v-row align="center" class="fill-height">
         <v-col align-self="center" class="pa-0" cols="12">

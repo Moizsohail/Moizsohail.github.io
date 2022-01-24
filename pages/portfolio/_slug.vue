@@ -58,26 +58,28 @@ export default {
       opacity: 0.6693333333730698,
     }
   },
-  head: {
-    title: 'Portfolio',
-    meta: [
-      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Make it work, make it right, make it fast.',
-      },
-    ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
-      },
-    ],
+  head() {
+    return {
+      title: this.current?.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.current?.desc,
+        },
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
+        },
+      ],
+    }
   },
   computed: {
     current() {

@@ -76,6 +76,11 @@ export default {
       ],
     }
   },
+  watch: {
+    drawer() {
+      this.first = true
+    },
+  },
   methods: {
     subclose(x) {
       this.$emit('close')
@@ -86,11 +91,6 @@ export default {
       } else {
         x.clicked = !x.clicked
       }
-    },
-  },
-  watch: {
-    drawer() {
-      this.first = true
     },
   },
 }

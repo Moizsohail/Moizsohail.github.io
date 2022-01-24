@@ -49,6 +49,19 @@ export default {
   components: {
     Modal,
   },
+  head() {
+    return {
+      title: 'Portfolio',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My Portfolio',
+        },
+      ],
+    }
+  },
   filters: {
     toString(value) {
       if (!value) return ''
