@@ -14,8 +14,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "aos": "^3.0.0-beta.6",
-    "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
+    "core-js": "^3.20.3",
+    "nuxt": "^2.15.8",
     "nuxt-gsap": "^0.1.4",
     "rellax": "^1.12.1",
     "vue-rellax": "^0.2.0",
@@ -23,15 +23,14 @@
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^3.1.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/vuetify": "^1.11.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.10.0",
-    "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-nuxt": "^1.0.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.1.2",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/vuetify": "^1.12.3",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
     "push-dir": "^0.4.1"
   }
 }
