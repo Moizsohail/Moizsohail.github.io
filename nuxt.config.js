@@ -35,14 +35,10 @@ export default {
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
-  googleAnalytics: {
-    id: 'G-CFYPW5FBC4',
-  },
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/google-analytics',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     'nuxt-gsap',
