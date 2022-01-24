@@ -23,6 +23,7 @@ export default {
       '/portfolio/dementiacare',
       '/portfolio/educative',
       '/portfolio/kebetturus',
+      '/portfolio/surveybot',
     ],
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
