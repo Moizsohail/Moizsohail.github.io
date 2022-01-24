@@ -21,6 +21,8 @@ export default {
       '/portfolio/vlancer',
       '/portfolio/psifi',
       '/portfolio/dementiacare',
+      '/portfolio/educative',
+      '/portfolio/kebetturus',
     ],
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -40,6 +42,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
+    '@nuxt/image',
     '@nuxtjs/vuetify',
     'nuxt-gsap',
   ],

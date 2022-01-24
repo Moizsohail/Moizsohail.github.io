@@ -12,11 +12,12 @@
             :style="`--index: ${i};`"
           >
             <div class="list-complete-item" elevation="5" @click="goto(item)">
-              <v-img
+              <nuxt-img
                 v-ripple
+                format="webp"
                 :src="item.img[0]"
-                aspect-ratio="0.7"
-                class="grey darken-4"
+                fit="cover"
+                class="grey darken-4 cover-image"
                 @click="currObj = item"
               >
                 <template #placeholder>
@@ -31,7 +32,7 @@
                     ></v-progress-circular>
                   </v-row>
                 </template>
-              </v-img>
+              </nuxt-img>
               <p class="text-h3 top-title">{{ item.title }}</p>
             </div>
           </div>
@@ -84,6 +85,7 @@ export default {
   src: local('Gotham'),
     url(~assets/fonts/trump_gothic_east_bold.ttf) format('truetype');
 }
+
 #portfolio {
   margin: 60px 0px;
 }
@@ -208,17 +210,15 @@ span:hover:after {
 }
 .list-complete-item {
   transition: transform 0.5s;
-
+  overflow: hidden;
+  aspect-ratio: 0.7;
   cursor: pointer;
   flex: 25%;
-
-  /* animation: fade-in 1s ease calc(0.025s * (var(--length) - (var(--index) + 1))); */
   position: relative;
-
-  /* height: 200px; */
   padding: 10px;
-  /*   display: inline-block;
-  margin-right: 10px; */
+}
+.cover-image {
+  height: 100%;
 }
 /* @keyframes fade-in {
   0% {
