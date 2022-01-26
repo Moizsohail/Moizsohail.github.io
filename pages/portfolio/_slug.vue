@@ -17,7 +17,7 @@
         <h2>
           {{ current.title }}
         </h2>
-        <p class="descr">
+        <p>
           {{ current.desc }}
         </p>
       </div>
@@ -36,13 +36,13 @@
 </template>
 
 <script>
-import Main from '~/components/porttemp/main'
-import Multiple from '~/components/porttemp/multiple'
-import InfoCol from '~/components/porttemp/infocol'
-import Side from '~/components/porttemp/side'
-import Parallax from '~/components/porttemp/parallax'
-import One from '~/components/porttemp/one'
-import Tech from '~/components/porttemp/tech'
+import Main from '~/components/portfolio_templates/main'
+import Multiple from '~/components/portfolio_templates/multiple'
+import InfoCol from '~/components/portfolio_templates/infocol'
+import Side from '~/components/portfolio_templates/side'
+import Parallax from '~/components/portfolio_templates/parallax'
+import One from '~/components/portfolio_templates/one'
+import Tech from '~/components/portfolio_templates/tech'
 export default {
   components: {
     Multiple,
@@ -146,7 +146,7 @@ export default {
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -2.6px;
-    font-family: athelas;
+
     font-weight: 400;
   }
   h2 {
@@ -157,12 +157,11 @@ export default {
     font-weight: 400;
   }
   p {
-    font-family: ministry;
-    color: #a0989e;
-    font-size: 16px;
+    color: #bdb8bc;
+    font-size: 18px;
     line-height: 24px;
     white-space: pre-line;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0;
   }
   .v-parallax {
@@ -278,7 +277,6 @@ export default {
   margin-bottom: 0;
   color: hsla(0, 0%, 100%, 0.49);
   text-align: left;
-  font-family: ministry;
 
   font-size: 14px;
   line-height: 24px;
