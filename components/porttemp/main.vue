@@ -5,7 +5,7 @@
     </div>
     <div class="title" :class="{ content: small }">
       <h3>{{ blob.title }}</h3>
-      <p>
+      <p class="descr">
         {{ blob.desc }}
       </p>
     </div>

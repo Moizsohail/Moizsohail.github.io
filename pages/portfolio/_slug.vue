@@ -1,5 +1,5 @@
 <template>
-  <div id="port">
+  <div id="portfolio">
     <div class="project-hero">
       <div
         class="cover"
@@ -110,14 +110,7 @@ export default {
   },
 }
 </script>
-<style>
-#port h3 {
-  font-size: 48px;
-  line-height: 48px;
-  letter-spacing: -2.6px;
-  font-family: athelas;
-  font-weight: 400;
-}
+<style lang="scss">
 .title {
   margin-bottom: 60px !important;
   max-width: 1000px;
@@ -148,34 +141,46 @@ export default {
   max-width: 900px; */
   margin: auto;
 }
-#port h2 {
-  font-size: 72px;
-  line-height: 64px;
-  letter-spacing: -2px;
-  font-family: athelas;
-  font-weight: 400;
+#portfolio {
+  h3 {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.6px;
+    font-family: athelas;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 72px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    font-family: athelas;
+    font-weight: 400;
+  }
+  p {
+    font-family: ministry;
+    color: #a0989e;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: pre-line;
+    font-weight: 300;
+    letter-spacing: 0;
+  }
+  .v-parallax {
+    height: 100vh !important;
+  }
 }
-#port p {
-  font-family: ministry;
-  color: #a0989e;
-  font-size: 14px;
-  line-height: 24px;
-  white-space: pre-line;
-  font-weight: 300;
-  letter-spacing: 0;
-}
-#port .v-parallax {
-  height: 100vh !important;
-}
+
 @media screen and (max-width: 800px) {
   .title {
     width: 80%;
   }
-  #port h2 {
-    font-size: 50px;
-  }
-  #port h3 {
-    font-size: 40px;
+  #portfolio {
+    h2 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 40px;
+    }
   }
 }
 </style>
