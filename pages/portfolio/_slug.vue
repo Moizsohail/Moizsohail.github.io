@@ -101,6 +101,8 @@ export default {
   },
   methods: {
     handleScroll() {
+      const isDev = process.env.NODE_ENV !== 'production'
+      console.log(isDev)
       // Your scroll handling here
       const scroll = window.scrollY + 200
       if (scroll < 300) {
@@ -136,9 +138,6 @@ export default {
   margin: auto;
 }
 .contain {
-  /* padding-left: 24px;
-  padding-right: 24px;
-  max-width: 900px; */
   margin: auto;
 }
 #portfolio {
