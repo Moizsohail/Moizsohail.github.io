@@ -7,6 +7,5 @@ import mod4 from '~/static/work/4SurveyBot/info'
 import mod5 from '~/static/work/Zambeel Planner/info'
 
 export const state = () => ({
-
     data: [mod0,mod6, mod1, mod2, mod3, mod4,mod5],
 })

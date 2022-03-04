@@ -1,3 +1,4 @@
+// DEPRECATED
 export const state = () => ({
   projects: [
     {

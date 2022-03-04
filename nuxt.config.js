@@ -27,7 +27,9 @@ export default {
       '/portfolio/surveybot',
     ],
   },
-
+  serverMiddleware: process.env.NODE_ENV === 'development' && [
+    '~/api/index.js',
+  ],
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~assets/main.scss'],
 

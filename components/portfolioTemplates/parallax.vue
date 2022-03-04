@@ -35,6 +35,10 @@ export default {
       type: Object,
       required: true,
     },
+    editMode: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>

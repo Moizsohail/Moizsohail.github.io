@@ -1,48 +1,52 @@
 <template>
   <div id="portfolio">
     <div class="project-hero">
-      <div
-        class="cover"
-        :style="{
-          opacity: opacity,
-        }"
-      ></div>
-      <div
-        class="hero-image-lp"
-        :style="{
-          'background-image': `linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${current.bg})`,
-        }"
-      ></div>
+      <image-update id="image-update-lp-wrapper">
+        <div
+          class="cover"
+          :style="{
+            opacity: opacity,
+          }"
+        ></div>
+        <div
+          class="hero-image-lp"
+          :style="{
+            'background-image': `linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${current.bg})`,
+          }"
+        ></div>
+      </image-update>
       <div class="project-intro container">
-        <h2>
-          {{ current.title }}
-        </h2>
-        <p>
-          {{ current.desc }}
-        </p>
+        <editable-area :text="current.title" type="h2" />
+        <editable-area :text="current.desc" />
       </div>
     </div>
     <div v-for="(x, i) in current.section" :key="i + x.type">
       <Main v-if="x.type == 'main'" :blob="x"></Main>
       <InfoCol v-if="x.type == 'info'" :blob="x"></InfoCol>
       <Multiple v-if="x.type == 'multiple'" :blob="x"></Multiple>
-      <One v-if="x.type == 'one'" :blob="x" />
+      <One v-if="x.type == 'one'" :blob="x" @handleChange="handleChange" />
       <Parallax v-if="x.type == 'parallax'" :blob="x" />
       <Side v-if="x.type == 'side'" :blob="x" />
       <Tech v-if="x.type == 'tech'" :blob="x" />
+    </div>
+    <div id="save-changes">
+      <v-btn>Save Changes</v-btn>
     </div>
     <div class="spacer"></div>
   </div>
 </template>
 
 <script>
-import Main from '~/components/portfolio_templates/main'
-import Multiple from '~/components/portfolio_templates/multiple'
-import InfoCol from '~/components/portfolio_templates/infocol'
-import Side from '~/components/portfolio_templates/side'
-import Parallax from '~/components/portfolio_templates/parallax'
-import One from '~/components/portfolio_templates/one'
-import Tech from '~/components/portfolio_templates/tech'
+import Main from '~/components/portfolioTemplates/main'
+import Multiple from '~/components/portfolioTemplates/multiple'
+import InfoCol from '~/components/portfolioTemplates/infocol'
+import Side from '~/components/portfolioTemplates/side'
+import Parallax from '~/components/portfolioTemplates/parallax'
+import One from '~/components/portfolioTemplates/one'
+import Tech from '~/components/portfolioTemplates/tech'
+import EditableArea from '~/components/portfolioForms/editableArea'
+import ImageUpdate from '~/components/portfolioForms/imageUpdate'
+
 export default {
   components: {
     Multiple,
@@ -52,10 +56,13 @@ export default {
     One,
     InfoCol,
     Side,
+    EditableArea,
+    ImageUpdate,
   },
   data() {
     return {
       opacity: 0.6693333333730698,
+      changes: {},
     }
   },
   head() {
@@ -91,6 +98,9 @@ export default {
 
       return object[0]
     },
+    editMode() {
+      return process.env.NODE_ENV === 'development'
+    },
   },
 
   beforeMount() {
@@ -100,9 +110,11 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    handleChange(e) {
+      // eslint-disable-next-line no-console
+      console.log(e)
+    },
     handleScroll() {
-      const isDev = process.env.NODE_ENV !== 'production'
-      console.log(isDev)
       // Your scroll handling here
       const scroll = window.scrollY + 200
       if (scroll < 300) {
@@ -155,7 +167,7 @@ export default {
     font-family: athelas;
     font-weight: 400;
   }
-  p {
+  .para {
     color: #bdb8bc;
     font-size: 18px;
     line-height: 24px;
@@ -183,6 +195,10 @@ export default {
 }
 </style>
 <style scoped>
+#save-changes {
+  width: 100px;
+  margin: auto;
+}
 .project-hero .cover {
   position: absolute;
   height: 92vh;
@@ -290,5 +306,11 @@ export default {
 
 .spacer {
   height: 200px;
+}
+#image-update-lp-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -1;
 }
 </style>

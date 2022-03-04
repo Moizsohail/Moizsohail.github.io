@@ -1,3 +1,9 @@
 {
-  "python.pythonPath": "D:\\anaconda\\python.exe"
+  "python.pythonPath": "D:\\anaconda\\python.exe",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/docs": true
+  }
 }
