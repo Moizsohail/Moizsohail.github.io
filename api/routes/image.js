@@ -1,12 +1,11 @@
 /* eslint-disable no-console */
 import multer from 'multer'
 import { Router } from 'express'
+import { cwd, work } from '../helper'
 
 const { readFileSync, unlinkSync, writeFileSync, existsSync } = require('fs')
 
 const router = Router()
-const cwd = (path = '') => `./static${path}`
-const work = (path = '') => `./static/work${path}`
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -22,7 +21,7 @@ const upload = multer({ storage })
 
 router.post('/image', upload.single('image'), (req, res) => {
   const { jsonPath, project } = req.body
-  console.log(req.file)
+
   const infoPath = work(`/${project}/info.json`)
   const rawdata = readFileSync(infoPath)
   const proj = JSON.parse(rawdata)

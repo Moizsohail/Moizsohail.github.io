@@ -1,11 +1,10 @@
 import express from 'express'
-import editor from './routes/image'
+import image from './routes/image'
 import project from './routes/project'
 
 // Create express instance
 const app = express()
-
-app.use(editor)
+if (process.env.NODE_ENV === 'development') app.use(image)
 app.use(project)
 
 // Export the server middleware

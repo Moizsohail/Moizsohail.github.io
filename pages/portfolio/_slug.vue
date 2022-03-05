@@ -64,12 +64,22 @@ export default {
     return {
       opacity: 0.6693333333730698,
       changes: '',
+      current: {},
     }
   },
   async fetch() {
-    const response = await this.$axios.get('/api/project')
+    const slug = this.$route.params.slug
+    console.log(`/api/project?project=${slug}`)
+    try {
+      const response = await this.$axios.$get(`/api/project?project=${slug}`)
+      console.log(response)
+      this.current = response
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e)
+    }
+
     // eslint-disable-next-line dot-notation
-    this.changes = response['data']['bro']
   },
   head() {
     return {
@@ -95,15 +105,15 @@ export default {
     }
   },
   computed: {
-    current() {
-      const url = this.$route.params.slug
-      const object = this.$store.state.work.data.filter((x) => x.url === url)
-      if (object.length === 0) {
-        return 'error'
-      }
+    // current() {
+    //   const url = this.$route.params.slug
+    //   const object = this.$store.state.work.data.filter((x) => x.url === url)
+    //   if (object.length === 0) {
+    //     return 'error'
+    //   }
 
-      return object[0]
-    },
+    //   return object[0]
+    // },
     editMode() {
       return process.env.NODE_ENV === 'development'
     },
