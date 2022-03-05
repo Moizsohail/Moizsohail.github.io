@@ -25,7 +25,7 @@ export default {
       formData.append('jsonPath', 'bg')
       formData.append('image', this.$refs.file.files[0])
       this.$axios
-        .$post('/api/editor/image', formData, {
+        .$post('/api/image', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

@@ -30,6 +30,7 @@
       <Tech v-if="x.type == 'tech'" :blob="x" />
     </div>
     <div id="save-changes">
+      {{ changes }}
       <v-btn>Save Changes</v-btn>
     </div>
     <div class="spacer"></div>
@@ -62,8 +63,13 @@ export default {
   data() {
     return {
       opacity: 0.6693333333730698,
-      changes: {},
+      changes: '',
     }
+  },
+  async fetch() {
+    const response = await this.$axios.get('/api/project')
+    // eslint-disable-next-line dot-notation
+    this.changes = response['data']['bro']
   },
   head() {
     return {

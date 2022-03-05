@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-router.post('/editor/image', upload.single('image'), (req, res) => {
+router.post('/image', upload.single('image'), (req, res) => {
   const { jsonPath, project } = req.body
   console.log(req.file)
   const infoPath = work(`/${project}/info.json`)
@@ -33,7 +33,6 @@ router.post('/editor/image', upload.single('image'), (req, res) => {
     unlinkSync(oldFilePath)
   }
 
-  console.log(req.file)
   proj[jsonPath] = `/work/${req.file.filename}`
   writeFileSync(infoPath, JSON.stringify(proj))
 
