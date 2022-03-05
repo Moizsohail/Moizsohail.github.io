@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/portfolio/psifix", {data:[{_img:{}}],fetch:{"data-v-d0d45a56:0":{opacity:.6693333333730698,changes:"bro"}},mutations:[]});

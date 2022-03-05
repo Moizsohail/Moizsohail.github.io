@@ -1,6 +1,0 @@
-#Title
-DementiaCare+
-#Description
-A program to serve the dementia care takers in pakistan.
-#Link
-https://moizsohail.github.io/

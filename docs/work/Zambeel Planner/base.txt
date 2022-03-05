@@ -1,6 +1,0 @@
-#Title
-Zambeel Planner
-#Description
-A fiverr like startup for the Pakistani graduates.
-#Link
-https://moizsohail.github.io/

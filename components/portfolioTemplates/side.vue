@@ -1,16 +1,14 @@
 <template>
   <div class="side">
     <div class="title">
-      <h3>{{ blob.bigtitle }}</h3>
+      <editable-area type="h3">{{ blob.bigtitle }}</editable-area>
       <p>{{ blob.bigdesc }}</p>
     </div>
     <div class="d-flex container">
       <div class="rside vcenter">
         <div class="text">
-          <h3>{{ blob.title }}</h3>
-          <p>
-            {{ blob.desc }}
-          </p>
+          <editable-area type="h3" :text="blob.title" />
+          <editable-area type="p" multiline :text="blob.desc" />
         </div>
         <div v-if="blob.images.length > 1" class="d-flex">
           <div
@@ -41,7 +39,9 @@
   </div>
 </template>
 <script>
+import editableArea from '../portfolioForms/editableArea.vue'
 export default {
+  components: { editableArea },
   props: {
     blob: {
       required: true,

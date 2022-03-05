@@ -1,16 +1,16 @@
 {
-  "img": ["image.jpg"],
-  "bg": "bg1.jpg",
+  "img": ["/work/1Vlancer/image.jpg"],
+  "bg": "/work/1Vlancer/bg1.jpg",
   "title": "Vlancer",
   "url": "vlancer",
   "desc": "A startup to introduce a Fiverr-like platform within Pakistan where people can put up advertisement for work they want to get done and the clients on the other end can easily connect and earn some money. (Web,iOS, Android).",
   "section": [
     {
       "type": "main",
-      "main": "FireShot Capture 006 - Vlancer - localhost.jpg",
+      "main": "/work/1Vlancer/FireShot Capture 006 - Vlancer - localhost.jpg",
       "title": "Tailored For Pakistan",
       "desc": "The goal of this project was to introduce a user-friendly platform for the Pakistani people. This platform has the potential of allowing people to earn some extra money, apart from their daily money.",
-      "other": "FireShot Capture 003 - About Us - Vlancer - localhost2.jpg"
+      "other": "/work/1Vlancer/FireShot Capture 003 - About Us - Vlancer - localhost2.jpg"
     },
     {
       "type": "info",
@@ -38,12 +38,12 @@
       "title": "Vlancer For Android",
       "desc": "To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.",
       "images": [
-        "shotsnapp-1612980040.961.png",
-        "shotsnapp-1612980050.82.png",
-        "shotsnapp-1612978867.965.png",
-        "shotsnapp-1612980065.223.png",
-        "shotsnapp-1612978867.965.png",
-        "shotsnapp-1612981221.31.png"
+        "/work/1Vlancer/shotsnapp-1612980040.961.png",
+        "/work/1Vlancer/shotsnapp-1612980050.82.png",
+        "/work/1Vlancer/shotsnapp-1612978867.965.png",
+        "/work/1Vlancer/shotsnapp-1612980065.223.png",
+        "/work/1Vlancer/shotsnapp-1612978867.965.png",
+        "/work/1Vlancer/shotsnapp-1612981221.31.png"
       ]
     },
     {
