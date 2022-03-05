@@ -1,1 +1,56 @@
-{"img":["/work/1Vlancer/image.jpg"],"bg":"/work/1Vlancer/bg1.jpg","title":"Vlancer","url":"vlancer","desc":"A startup to introduce a Fiverr-like platform within Pakistan where people can put up advertisement for work they want to get done and the clients on the other end can easily connect and earn some money. (Web,iOS, Android).","section":[{"type":"main","main":"/work/1Vlancer/FireShot Capture 006 - Vlancer - localhost.jpg","title":"Tailored For Pakistan","desc":"The goal of this project was to introduce a user-friendly platform for the Pakistani people. This platform has the potential of allowing people to earn some extra money, apart from their daily money.","other":"/work/1Vlancer/FireShot Capture 003 - About Us - Vlancer - localhost2.jpg"},{"type":"info","title":"Features","column":[{"title":"Messaging","desc":"Utilizing the socket, a one-one chat was enabled to allow two parties to communicate which each other before they carry out a transaction","icon":"fas fa-comment-dollar"},{"title":"Wallet","desc":"A personal wallet was created to allow people to store and easily out transactions. An overview was also given in the end","icon":"fas fa-wallet"},{"title":"Live Notification","desc":"A notification system was developed to quickly notify people about any updates.","icon":"fas fa-bell"}]},{"type":"multiple","title":"Vlancer For Android","desc":"To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.","images":["/work/1Vlancer/shotsnapp-1612980040.961.png","/work/1Vlancer/shotsnapp-1612980050.82.png","/work/1Vlancer/shotsnapp-1612978867.965.png","/work/1Vlancer/shotsnapp-1612980065.223.png","/work/1Vlancer/shotsnapp-1612978867.965.png","/work/1Vlancer/shotsnapp-1612981221.31.png"]},{"type":"tech","title":"Technology","desc":"","tech":["Flutter","Strapi","SocketIO"]}]}
+{
+  "img": ["/work/1Vlancer/image.jpg"],
+  "bg": "/work/1Vlancer/bg1.jpg",
+  "title": "Vlancer",
+  "url": "vlancer",
+  "desc": "A startup to introduce a Fiverr-like platform within Pakistan where people can put up advertisement for work they want to get done and the clients on the other end can easily connect and earn some money. (Web,iOS, Android).",
+  "section": [
+    {
+      "type": "main",
+      "main": "/work/1Vlancer/FireShot Capture 006 - Vlancer - localhost.jpg",
+      "title": "Tailored For Pakistan",
+      "desc": "The goal of this project was to introduce a user-friendly platform for the Pakistani people. This platform has the potential of allowing people to earn some extra money, apart from their daily money.",
+      "other": "/work/1Vlancer/FireShot Capture 003 - About Us - Vlancer - localhost2.jpg"
+    },
+    {
+      "type": "info",
+      "title": "Features",
+      "column": [
+        {
+          "title": "Messaging",
+          "desc": "Utilizing the socket, a one-one chat was enabled to allow two parties to communicate which each other before they carry out a transaction",
+          "icon": "fas fa-comment-dollar"
+        },
+        {
+          "title": "Wallet",
+          "desc": "A personal wallet was created to allow people to store and easily out transactions. An overview was also given in the end",
+          "icon": "fas fa-wallet"
+        },
+        {
+          "title": "Live Notification",
+          "desc": "A notification system was developed to quickly notify people about any updates.",
+          "icon": "fas fa-bell"
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "title": "Vlancer For Android",
+      "desc": "To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.",
+      "images": [
+        "/work/1Vlancer/shotsnapp-1612980040.961.png",
+        "/work/1Vlancer/shotsnapp-1612980050.82.png",
+        "/work/1Vlancer/shotsnapp-1612978867.965.png",
+        "/work/1Vlancer/shotsnapp-1612980065.223.png",
+        "/work/1Vlancer/shotsnapp-1612978867.965.png",
+        "/work/1Vlancer/shotsnapp-1612981221.31.png"
+      ]
+    },
+    {
+      "type": "tech",
+      "title": "Technology",
+      "desc": "",
+      "tech": ["Flutter", "Strapi", "SocketIO"]
+    }
+  ]
+}
