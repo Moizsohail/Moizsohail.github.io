@@ -1,42 +1,38 @@
 {
-  "img": ["/work/3PsifiXi/image.jpg"],
-  "bg": "/work/3PsifiXi/psifi.jpg",
+  "img": ["image.jpg"],
+  "bg": "psifi.jpg",
   "title": "PsifiXI",
   "url": "psifi",
   "desc": "IT director of Spades",
   "section": [
     {
       "type": "main",
-      "main": "/work/3PsifiXi/FireShot Capture 031 - SPADES - spades.lums.edu.pk.jpg",
+      "main": "FireShot Capture 031 - SPADES - spades.lums.edu.pk.jpg",
       "title": "About Psifi",
       "desc": "SPADES’ flagship event, PsiFi, is one of the biggest science olympiad in Pakistan where students of various schools from all over the country come to participate. With more than 1100 participants last year, PsiFi has had 10 successful editions with the 11th edition to come this academic year. The organizing team consists of around 300 members every year and each one of them working hard to make sure the participants have the most enjoyable learning experience.",
-      "other": "/work/3PsifiXi/imagezz.jpg"
+      "other": "imagezz.jpg"
     },
     {
       "type": "one",
       "contained": "true",
       "title": "PlayStore",
       "desc": "Too smoothen out the workflow, spades also have an android app to reach out as many people as possible.",
-      "images": ["/work/3PsifiXi/mockuper_8.jpg"]
+      "images": ["mockuper_8.jpg"]
     },
     {
       "type": "side",
       "title": "Registration Page",
       "desc": "One of the core duties as an IT director was to build a seamless registration portal for the applicants. ",
-      "images": [
-        "/work/3PsifiXi/mockuper_12.png",
-        "/work/3PsifiXi/mockuper_13.jpg",
-        "/work/3PsifiXi/mockuper_14.jpg"
-      ]
+      "images": ["mockuper_12.png", "mockuper_13.jpg", "mockuper_14.jpg"]
     },
     {
       "type": "multiple",
       "title": "Spades Psifi XI",
       "desc": "To maximize the outreach, we have made use of the flutter framework to try and target both android and ios users. At the moment, due to some limitations the IOS application has been delayed.",
       "images": [
-        "/work/3PsifiXi/shotsnapp-1613050330.951.png",
-        "/work/3PsifiXi/shotsnapp-1613050344.061.png",
-        "/work/3PsifiXi/shotsnapp-1613050358.444.png"
+        "shotsnapp-1613050330.951.png",
+        "shotsnapp-1613050344.061.png",
+        "shotsnapp-1613050358.444.png"
       ]
     },
     {

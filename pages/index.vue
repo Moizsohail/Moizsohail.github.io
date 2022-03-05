@@ -119,6 +119,7 @@
       <section v-rellax="{ speed: 0 }" class="capabilities">
         <Services />
       </section>
+      <section></section>
       <section v-rellax="{ speed: 0 }" class="contact">
         <h1 class="text-h1">Let's Make Something Great Together</h1>
 

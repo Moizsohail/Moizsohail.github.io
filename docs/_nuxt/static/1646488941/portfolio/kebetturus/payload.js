@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/portfolio/kebetturus", {data:[{_img:{}}],fetch:{"data-v-0f1120b2:0":{opacity:.6693333333730698,changes:"",current:{}}},mutations:[]});
