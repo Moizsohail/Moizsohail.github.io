@@ -11,7 +11,9 @@
         <div
           class="hero-image-lp"
           :style="{
-            'background-image': `linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${current.bg})`,
+            'background-image': `linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${prepareImage(
+              current.bg
+            )})`,
           }"
         ></div>
       </image-update>
@@ -24,7 +26,7 @@
       <Main v-if="x.type == 'main'" :blob="x"></Main>
       <InfoCol v-if="x.type == 'info'" :blob="x"></InfoCol>
       <Multiple v-if="x.type == 'multiple'" :blob="x"></Multiple>
-      <One v-if="x.type == 'one'" :blob="x" @handleChange="handleChange" />
+      <One v-if="x.type == 'one'" :blob="x" />
       <Parallax v-if="x.type == 'parallax'" :blob="x" />
       <Side v-if="x.type == 'side'" :blob="x" />
       <Tech v-if="x.type == 'tech'" :blob="x" />
@@ -38,6 +40,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Main from '~/components/portfolioTemplates/main'
 import Multiple from '~/components/portfolioTemplates/multiple'
 import InfoCol from '~/components/portfolioTemplates/infocol'
@@ -69,10 +72,8 @@ export default {
   },
   async fetch() {
     const slug = this.$route.params.slug
-    console.log(`/api/project?project=${slug}`)
     try {
       const response = await this.$axios.$get(`/api/project?project=${slug}`)
-      console.log(response)
       this.current = response
     } catch (e) {
       // eslint-disable-next-line no-console
@@ -81,6 +82,7 @@ export default {
 
     // eslint-disable-next-line dot-notation
   },
+
   head() {
     return {
       title: this.current?.title,
@@ -105,20 +107,16 @@ export default {
     }
   },
   computed: {
-    // current() {
-    //   const url = this.$route.params.slug
-    //   const object = this.$store.state.work.data.filter((x) => x.url === url)
-    //   if (object.length === 0) {
-    //     return 'error'
-    //   }
-
-    //   return object[0]
-    // },
     editMode() {
       return process.env.NODE_ENV === 'development'
     },
+    ...mapGetters({
+      prepareImage: 'work/prepareImage',
+    }),
   },
-
+  mounted() {
+    this.$store.commit('work/accessProject', this.$route.params.slug)
+  },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
   },

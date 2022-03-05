@@ -1,16 +1,16 @@
 {
-  "img": ["/work/5Educative/front.png"],
-  "bg": "/work/5Educative/bg.jpg",
+  "img": ["front.png"],
+  "bg": "bg.jpg",
   "title": "Educative",
   "url": "educative",
   "desc": "Software Engineer | Currently Employed",
   "section": [
     {
       "type": "main",
-      "main": "/work/5Educative/main.png",
+      "main": "main.png",
       "title": "About Educative",
       "desc": "Educative is an online platform that enables young coders to learn new skills in an hands on coding environment",
-      "other": "/work/5Educative/other.png"
+      "other": "other.png"
     },
     {
       "type": "side",
@@ -24,7 +24,7 @@
       "contained": "false",
       "title": "What does it do?",
       "desc": "WIP",
-      "images": ["/work/5Educative/ipad.png"]
+      "images": ["ipad.png"]
     },
     {
       "type": "tech",

@@ -9,3 +9,21 @@
 // export const state = () => ({
 //     data: [mod0,mod6, mod1, mod2, mod3, mod4,mod5],
 // })
+// export const state = ()=>({
+//     currentProjecc:
+// })
+export const state = ()=>({
+    currentSlug:""
+})
+export const mutations = {
+  accessProject(state,slug) {
+    state.currentSlug = slug
+  }
+}
+export const getters = {
+    prepareImage (state) {
+      return (filename)=>{
+        return `/work/${state.currentSlug}/${filename}`
+      }
+    }
+}

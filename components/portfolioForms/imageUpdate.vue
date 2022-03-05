@@ -31,10 +31,12 @@ export default {
           },
         })
         .then(function () {
+          // eslint-disable-next-line no-console
           console.log('SUCCESS!!')
         })
         .catch(function () {
-          console.log('FAILURE!!')
+          // eslint-disable-next-line no-console
+          console.error('FAILURE!!')
         })
     },
   },
@@ -44,6 +46,8 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 #fileElem {
   display: None;
@@ -53,6 +57,7 @@ export default {
 .image-upload-edit {
   width: 100%;
   height: 100%;
+  top: 0px;
   cursor: pointer;
   position: absolute;
 

@@ -1,13 +1,16 @@
 <template>
   <div class="d-flex container">
     <div class="main-image">
-      <img v-if="blob.main" :src="$img(blob.main, { format: 'webp' })" />
+      <image-update>
+        <img
+          v-if="blob.main"
+          :src="$img(prepareImage(blob.main), { format: 'webp' })"
+        />
+      </image-update>
     </div>
     <div class="text" :class="{ content: small }">
-      <h3>{{ blob.title }}</h3>
-      <p>
-        {{ blob.desc }}
-      </p>
+      <editable-area :text="blob.title" type="h3" multiline />
+      <editable-area :text="blob.desc" type="p" multiline />
     </div>
     <div
       v-if="blob.other"
@@ -15,12 +18,21 @@
       class="extra-image"
       :class="{ container: small, contained: small }"
     >
-      <img :src="$img(blob.other, { format: 'webp' })" />
+      <image-update>
+        <img :src="$img(prepareImage(blob.other), { format: 'webp' })" />
+      </image-update>
     </div>
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
+import ImageUpdate from '~/components/portfolioForms/imageUpdate.vue'
+import EditableArea from '~/components/portfolioForms/editableArea.vue'
 export default {
+  components: {
+    EditableArea,
+    ImageUpdate,
+  },
   props: {
     blob: {
       type: Object,
@@ -28,6 +40,9 @@ export default {
     },
   },
   computed: {
+    ...mapGetters({
+      prepareImage: 'work/prepareImage',
+    }),
     small() {
       if (process.client) {
         const width = window.innerWidth
