@@ -1,8 +1,0 @@
-#Title
-Vlancer
-#dest link
-vlancer
-#Description
-A startup to introduce a fiverr like platform within pakistan where people can put up advertisement for work they want to done and the clients on the other can easily connect and earn some money. (Web,iOS, Android).
-#Link
-#color

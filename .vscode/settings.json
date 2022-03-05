@@ -5,6 +5,9 @@
     "**/bower_components": true,
     "**/*.code-search": true,
     "**/docs": true,
-    "**/_nuxt": true
+    "**/_nuxt": true,
+    "**/static/work/**/**.jpg": true,
+    "**/static/work/**/**.jpeg": true,
+    "**/static/work/**/**.png": true
   }
 }
