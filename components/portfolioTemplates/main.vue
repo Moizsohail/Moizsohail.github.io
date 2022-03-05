@@ -2,10 +2,7 @@
   <div class="d-flex container">
     <div class="main-image">
       <image-update>
-        <img
-          v-if="blob.main"
-          :src="$img(prepareImage(blob.main), { format: 'webp' })"
-        />
+        <img v-if="blob.main" :src="$img(blob.main, { format: 'webp' })" />
       </image-update>
     </div>
     <div class="text" :class="{ content: small }">
@@ -19,13 +16,12 @@
       :class="{ container: small, contained: small }"
     >
       <image-update>
-        <img :src="$img(prepareImage(blob.other), { format: 'webp' })" />
+        <img :src="$img(blob.other, { format: 'webp' })" />
       </image-update>
     </div>
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
 import ImageUpdate from '~/components/portfolioForms/imageUpdate.vue'
 import EditableArea from '~/components/portfolioForms/editableArea.vue'
 export default {
@@ -40,9 +36,6 @@ export default {
     },
   },
   computed: {
-    ...mapGetters({
-      prepareImage: 'work/prepareImage',
-    }),
     small() {
       if (process.client) {
         const width = window.innerWidth

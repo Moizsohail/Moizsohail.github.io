@@ -11,9 +11,7 @@
         <div
           class="hero-image-lp"
           :style="{
-            'background-image': `linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${prepareImage(
-              current.bg
-            )})`,
+            'background-image': `linear-gradient(225deg,transparent 50%,rgba(0, 0, 0, 0.08)),url(${current.bg})`,
           }"
         ></div>
       </image-update>
@@ -40,7 +38,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import Main from '~/components/portfolioTemplates/main'
 import Multiple from '~/components/portfolioTemplates/multiple'
 import InfoCol from '~/components/portfolioTemplates/infocol'
@@ -110,9 +107,6 @@ export default {
     editMode() {
       return process.env.NODE_ENV === 'development'
     },
-    ...mapGetters({
-      prepareImage: 'work/prepareImage',
-    }),
   },
   mounted() {
     this.$store.commit('work/accessProject', this.$route.params.slug)

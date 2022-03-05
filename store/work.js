@@ -20,10 +20,3 @@ export const mutations = {
     state.currentSlug = slug
   }
 }
-export const getters = {
-    prepareImage (state) {
-      return (filename)=>{
-        return `/work/${state.currentSlug}/${filename}`
-      }
-    }
-}

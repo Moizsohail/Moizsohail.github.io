@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="title">
-      <h3>{{ blob.title }}</h3>
-      <p>{{ blob.desc }}</p>
+      <editable-area :text="blob.title" type="h3" />
+      <editable-area :text="blob.desc" />
     </div>
     <div class="grid">
       <div v-for="x in blob.images" :key="x">
@@ -29,7 +29,10 @@
   </div>
 </template>
 <script>
+import editableArea from '../portfolioForms/editableArea.vue'
+
 export default {
+  components: { editableArea },
   props: {
     blob: {
       type: Object,
