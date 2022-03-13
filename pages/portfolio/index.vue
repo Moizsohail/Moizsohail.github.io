@@ -75,14 +75,16 @@ export default {
       id: -1,
       items: [],
       currObj: {},
+      work: [],
     }
   },
-  computed: {
-    work() {
-      return this.$store.state.work.data
-    },
+  async fetch() {
+    try {
+      this.work = await this.$axios.$get('/api/project')
+    } catch (e) {
+      console.log(e)
+    }
   },
-
   methods: {
     goto(x) {
       this.$router.push('/portfolio/' + x.url)

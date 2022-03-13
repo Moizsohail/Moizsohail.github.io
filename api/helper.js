@@ -1,12 +1,31 @@
-import { readFileSync } from 'fs'
+import { readdirSync, readFileSync } from 'fs'
 
 export const cwd = (path = '') => `./static${path}`
 export const work = (path = '') => `./static/work${path}`
 
 export const getInfoBySlug = (slug) => {
-  const infoPath = work(`/${slug}/info.json`)
-  const rawData = readFileSync(infoPath)
-  return JSON.parse(rawData)
+  try {
+    const infoPath = work(`/${slug}/info.json`)
+    const rawData = readFileSync(infoPath)
+    return prepareImageUrls(slug, JSON.parse(rawData))
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error(e)
+    throw e
+  }
+}
+export const getAllInfo = () => {
+  try {
+    const files = readdirSync(work('/'))
+    return files
+      .filter((f) => !['.DS_Store'].includes(f))
+      .map(getInfoBySlug)
+      .filter(({ hidden }) => !hidden)
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error(e)
+    throw e
+  }
 }
 const imageKeys = {
   parent: ['bg', 'img'],
@@ -14,6 +33,7 @@ const imageKeys = {
   multiple: ['images'],
   side: ['images'],
   one: ['images'],
+  parallax: ['images'],
 }
 const expandObjUrlsByKey = (keys, obj, slug) => {
   keys.forEach((key) => {
@@ -24,7 +44,8 @@ const expandObjUrlsByKey = (keys, obj, slug) => {
 }
 export const prepareImageUrls = (slug, obj) => {
   expandObjUrlsByKey(imageKeys.parent, obj, slug)
-  obj.section.forEach((sec) => {
+
+  obj?.section?.forEach((sec) => {
     const keys = imageKeys[sec.type]
     if (keys) expandObjUrlsByKey(keys, sec, slug)
   })

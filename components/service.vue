@@ -153,6 +153,11 @@ export default {
           icon: 'fab fa-kickstarter-k',
         },
         {
+          head: 'Deep Learning',
+          title: 'Py Torch',
+          icon: 'fab fa-python',
+        },
+        {
           head: 'Languages',
           title: 'C++',
           icon: 'fab fa-cuttlefish',

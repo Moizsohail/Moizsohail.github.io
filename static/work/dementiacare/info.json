@@ -1,5 +1,5 @@
 {
-  "img": ["/work/2DementiaCare/image.jpg"],
+  "img": ["image.jpg"],
   "bg": "https://www.policyforum.labour.org.uk/uploads/editor/images/GettyImages-912073430_small.jpg",
   "title": "DementiaCare+",
   "url": "dementiacare",
@@ -7,10 +7,10 @@
   "section": [
     {
       "type": "main",
-      "main": "/work/2DementiaCare/big.jpg",
+      "main": "big.jpg",
       "title": "DementiaCare+ To The Rescue",
       "desc": "Dementia Caretakers engage in both noble and overwhelming endeavors every day. Being a Dementia Caretaker is a strenous job due to the level of demand and attention required by the patients. The purpose of this application is to provide job-related assistance to the people starting out as dementia caretakers.",
-      "other": "/work/2DementiaCare/mockuper_4.jpg"
+      "other": "mockuper_4.jpg"
     },
     {
       "type": "info",
@@ -38,19 +38,16 @@
       "type": "parallax",
       "title": "",
       "desc": "",
-      "images": [
-        "/work/2DementiaCare/mockuper_6.jpg",
-        "/work/2DementiaCare/mockuper_7.jpg"
-      ]
+      "images": ["mockuper_6.jpg", "mockuper_7.jpg"]
     },
     {
       "type": "multiple",
       "title": "DementiaCare+",
       "desc": "",
       "images": [
-        "/work/2DementiaCare/shotsnapp-1613044832.261.png",
-        "/work/2DementiaCare/shotsnapp-1613044285.463.png",
-        "/work/2DementiaCare/shotsnapp-1613044768.013.png"
+        "shotsnapp-1613044832.261.png",
+        "shotsnapp-1613044285.463.png",
+        "shotsnapp-1613044768.013.png"
       ]
     },
     {

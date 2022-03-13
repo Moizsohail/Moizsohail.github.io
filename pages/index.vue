@@ -64,7 +64,7 @@
         </v-container>
       </section>
       <section class="portfolio">
-        <div class="portfolio-title">
+        <div class="cinema-title">
           <h2 v-rellax="{ speed: 0 }" class="text-overline">Portfolio</h2>
           <h2 v-rellax="{ speed: 0 }" class="text-h3">
             Checkout a few of my projects
@@ -119,10 +119,28 @@
       <section v-rellax="{ speed: 0 }" class="capabilities">
         <Services />
       </section>
-      <section></section>
-      <section v-rellax="{ speed: 0 }" class="contact">
-        <h1 class="text-h1">Let's Make Something Great Together</h1>
+      <section class="stat">
+        <div class="cinema-title m-0">
+          <h2 class="text-overline">Stats</h2>
+          <h2 class="text-h3">My Contributions</h2>
+          <stats />
+        </div>
+      </section>
+      <section class="blog">
+        <h2 class="text-overline">Writing</h2>
+        <h2 class="text-h3">My Blogs</h2>
+        <blogs />
+      </section>
 
+      <section
+        v-rellax="{ speed: 0 }"
+        class="contact"
+        :style="{
+          'background-image': `linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.7)),
+    url('/contact1.png')`,
+        }"
+      >
+        <h1 class="text-h1">Let's Make Something Great Together</h1>
         <h3 class="text-h3">moizsohail@live.co.uk</h3>
       </section>
     </div>
@@ -131,11 +149,15 @@
 <script>
 import SocialBar from '~/components/socialbar'
 import Services from '~/components/service'
+import Blogs from '~/components/blogs'
+import Stats from '~/components/stats'
 
 export default {
   components: {
     SocialBar,
     Services,
+    Blogs,
+    Stats,
   },
   data() {
     return {
@@ -273,7 +295,7 @@ export default {
 }
 </style>
 
-<style scoped>
+<style scoped lang="scss">
 .socialbar {
   position: absolute;
   left: 0px;
@@ -308,42 +330,72 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   color: white;
   text-align: center;
   min-height: 98vh;
+  position: relative;
+
+  h1 {
+    color: #f6f7fb;
+    font-size: 50px !important;
+    font-family: 'futurabook' !important;
+    line-height: 55px;
+
+    letter-spacing: 1px;
+    font-weight: normal;
+    max-width: 542px;
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 2rem !important;
+    font-family: 'futurabook' !important;
+  }
+  h3 {
+    font-weight: 400;
+    font-family: 'futurabook' !important;
+
+    font-size: 1.75rem !important;
+  }
   /* padding: 380px 100px 380px 100px; */
+}
+.stat {
+  padding: 100px 50px;
+  min-height: 500px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.596);
+}
+.blog {
+  min-height: 400px;
+  padding: 50px 0px;
+  background: #1a1a1a;
+  color: rgba(255, 255, 255, 0.596);
+  position: relative;
+  padding: 50px 100px;
+  .text-h3 {
+    font-size: 2.4em !important;
+    margin-top: 1px;
+    font-family: 'futuraheavy' !important;
+    margin-bottom: 20px;
+  }
 }
 .capabilities {
   background: #1a1a1a;
   color: rgba(255, 255, 255, 0.596);
   padding: 100px 100px 150px 100px;
   margin-top: -200px;
-}
-.capabilities .bgtext {
-  /* position: absolute; */
-  color: transparent;
-  font-weight: normal;
-  font-family: 'futuraheavy';
-  letter-spacing: 3px;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-  line-height: 220px;
-}
-.contact h1 {
-  color: #f6f7fb;
-  font-size: 50px !important;
-  font-family: 'futurabook' !important;
-  line-height: 55px;
-
-  letter-spacing: 1px;
-  font-weight: normal;
-  max-width: 542px;
-  width: 100%;
-  margin: 0 auto 30px;
-}
-.contact h2 {
-  font-weight: 700;
-  font-size: 2rem !important;
-  font-family: 'futurabook' !important;
+  .bgtext {
+    color: transparent;
+    font-weight: normal;
+    font-family: 'futuraheavy';
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    line-height: 220px;
+  }
 }
 
 .cvtext {
@@ -354,24 +406,22 @@ i {
   cursor: pointer;
 }
 
-.contact h3 {
-  font-weight: 400;
-  font-family: 'futurabook' !important;
-
-  font-size: 1.75rem !important;
-}
-.portfolio-title .text-overline {
+.cinema-title {
   text-align: center;
+  margin-top: 10px;
+  color: white;
+  .text-overline {
+    color: white;
+    text-align: center;
+  }
+  .text-h3 {
+    font-family: 'futurabook' !important;
+  }
 }
 .text-body-1 {
   color: rgba(255, 255, 255, 0.562);
 }
-.portfolio-title .text-h3 {
-  font-family: 'futurabook' !important;
-}
-.portfolio-title {
-  text-align: center;
-  margin-top: 10px;
+.portfolio .cinema-title {
   padding: 150px 0px 0px;
 }
 .about-contact .text-body-1 a {
@@ -403,29 +453,15 @@ i {
 
   background: #000 url('~assets/images/DSC_0435.jpg') no-repeat fixed top left;
   background-size: cover;
-}
-.second:before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-}
-.bg:before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
-}
-
-.jumbotron {
-  height: 100vh;
-  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+  }
 }
 .second {
   position: relative;
@@ -433,17 +469,29 @@ i {
     url('https://images6.alphacoders.com/120/thumb-1920-1205444.jpg') no-repeat
     fixed top;
   background-size: cover;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+  }
 }
-
-.text p {
-  font-size: 58px;
-  margin: 0px;
+.jumbotron {
+  height: 100vh;
+  position: relative;
 }
 .text {
   z-index: 1;
   margin: 35vh 80px;
   position: absolute;
   background: transparent;
+  p {
+    font-size: 58px;
+    margin: 0px;
+  }
 }
 @media screen and (max-width: 400px) {
   .about-image {
