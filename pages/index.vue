@@ -141,7 +141,7 @@
         class="contact"
         :style="{
           'background-image': `linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.7)),
-    url('/contact1.png')`,
+    url(${getContactImage})`,
         }"
       >
         <h1 class="text-h1">Let's Make Something Great Together</h1>
@@ -218,6 +218,9 @@ export default {
     ],
   },
   computed: {
+    getContactImage() {
+      return this.$img('/contact1.jpg', { format: 'webp' })
+    },
     safeSpeed() {
       return (speed) => {
         if (process.client) {
@@ -379,7 +382,6 @@ export default {
   background: #262525;
   color: rgba(255, 255, 255, 0.596);
   position: relative;
-  padding: 50px 100px;
   .text-h3 {
     font-size: 2.4em !important;
     margin-top: 1px;

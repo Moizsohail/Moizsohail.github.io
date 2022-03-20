@@ -41,7 +41,7 @@ export default {
 .cards {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 0.5fr));
 
   gap: 20px;
 }
