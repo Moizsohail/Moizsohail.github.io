@@ -1,6 +1,7 @@
 {
   "img": ["front.png"],
   "bg": "bg.png",
+  "priority": 2,
   "title": "Educative",
   "url": "educative",
   "desc": "Software Engineer | Currently Employed",

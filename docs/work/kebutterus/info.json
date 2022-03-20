@@ -2,14 +2,14 @@
   "img": ["front.png"],
   "bg": "bg.png",
   "title": "Kebutterus | AISEC",
-  "url": "kebetturus",
+  "url": "kebutterus",
   "desc": "Intern | Web Developer",
   "section": [
     {
       "type": "main",
       "main": "main.png",
-      "title": "About Survey Bot",
-      "desc": "Are you tired of begging your friends to fill out a survey? Or maybe (like me) you realize that you have a project due tonight, and for that you need quantitative researched data. But you don't have that so what do you do? ",
+      "title": "About Kebutterus",
+      "desc": "Kebutterus is an ecommerce platform started by an indonesian company named Zataru. ",
       "other": ""
     },
     {
@@ -19,8 +19,8 @@
     {
       "type": "one",
       "contained": "false",
-      "title": "What does it do?",
-      "desc": "I know most of you have used google forms and you must know that whenever you fill out a survey all the records are stored in an excel(spreadsheet) file which you can download and do whatever you want to with it. \n This time you dont have to fill out a survey, instead you create a form on this webapp(I mean just fill out the question you are going to ask).",
+      "title": "Working with Aisec",
+      "desc": "Being a sole developer working for an international company can be a strenuous task. However, AISEC did a great job towards smoothing out the whole remote experience by holding continuous sessions. Not just that, the international and the professional exposure that I gained during this internship proved to be quite useful during my career journey",
       "images": ["insta.png"]
     },
     {
