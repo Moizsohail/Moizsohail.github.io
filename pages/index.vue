@@ -117,9 +117,11 @@
         </div>
       </section>
       <section v-rellax="{ speed: 0 }" class="capabilities">
-        <Services />
+        <v-container>
+          <Services />
+        </v-container>
       </section>
-      <section class="stat">
+      <section v-if="false" class="stat">
         <div class="cinema-title m-0">
           <h2 class="text-overline">Stats</h2>
           <h2 class="text-h3">My Contributions</h2>
@@ -127,9 +129,11 @@
         </div>
       </section>
       <section class="blog">
-        <h2 class="text-overline">Writing</h2>
-        <h2 class="text-h3">My Blogs</h2>
-        <blogs />
+        <v-container>
+          <h2 class="text-overline">Writing</h2>
+          <h2 class="text-h3">My Blogs</h2>
+          <blogs />
+        </v-container>
       </section>
 
       <section
@@ -372,7 +376,7 @@ export default {
 .blog {
   min-height: 400px;
   padding: 50px 0px;
-  background: #1a1a1a;
+  background: #262525;
   color: rgba(255, 255, 255, 0.596);
   position: relative;
   padding: 50px 100px;

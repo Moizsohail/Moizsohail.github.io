@@ -36,16 +36,12 @@ export default {
 
 <style scoped lang="scss">
 .blogs {
-  padding: 30px;
   width: 100%;
 }
 .cards {
   display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
-      0,
-      1fr
-    );
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   gap: 20px;
 }

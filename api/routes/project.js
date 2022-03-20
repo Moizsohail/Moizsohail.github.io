@@ -1,6 +1,5 @@
 import { Router } from 'express'
 import { getInfoBySlug, getAllInfo } from '../helper'
-
 const router = Router()
 
 router.get('/project', (req, res) => {
