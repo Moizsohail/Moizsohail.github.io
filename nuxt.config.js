@@ -20,10 +20,10 @@ export default {
     dir: 'docs',
     routes: [
       '/portfolio/vlancer',
-      '/portfolio/psifi',
+      '/portfolio/psifixi',
       '/portfolio/dementiacare',
       '/portfolio/educative',
-      '/portfolio/kebetturus',
+      '/portfolio/kebutterus',
       '/portfolio/surveybot',
     ],
   },

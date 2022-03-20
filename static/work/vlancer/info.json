@@ -1,5 +1,6 @@
 {
   "img": ["image.jpg"],
+  "priority": 1,
   "bg": "bg1.jpg",
   "title": "Vlancer",
   "url": "vlancer",

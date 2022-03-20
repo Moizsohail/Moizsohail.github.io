@@ -75,6 +75,7 @@ export default {
     } catch (e) {
       // eslint-disable-next-line no-console
       console.error(e)
+      this.$nuxt.error({ statusCode: 400, message: e })
     }
 
     // eslint-disable-next-line dot-notation
@@ -175,7 +176,7 @@ export default {
     font-family: athelas;
     font-weight: 400;
   }
-  .para {
+  p {
     color: #bdb8bc;
     font-size: 18px;
     line-height: 24px;

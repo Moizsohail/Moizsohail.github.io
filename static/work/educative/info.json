@@ -1,6 +1,7 @@
 {
   "img": ["front.png"],
-  "bg": "bg.jpeg",
+  "bg": "bg.png",
+  "priority": 2,
   "title": "Educative",
   "url": "educative",
   "desc": "Software Engineer | Currently Employed",
@@ -16,16 +17,30 @@
       "type": "side",
       "contained": "false",
       "title": "Enterprise Team",
-      "desc": "WIP",
+      "desc": "Right after joining educative, I was assigned to the enterprise team. This was one of the major teams in educative since its decision to move towards B2B clients.",
       "images": ["mockuper.png"]
+    },
+    {
+      "type": "multiple",
+      "title": "Educative on React Native",
+      "desc": "Like any other online platform, Educative decided on porting its platforms into its first IOS/Android application.",
+      "images": [
+        "react_native_phone1.png",
+        "react_native_phone2.png",
+        "react_native_phone3.png",
+        "react_native_phone4.png",
+        "react_native_phone5.png",
+        "react_native_phone6.png"
+      ]
     },
     {
       "type": "one",
       "contained": "false",
-      "title": "What does it do?",
-      "desc": "WIP",
+      "title": "My Journey",
+      "desc": "To sum up, I got to learn a lot of new skills along the way from full stack web development to working on scalable architectures. Educative has given me an indespensible set of skills that will enable me to grow for years to come",
       "images": ["ipad.png"]
     },
+
     {
       "type": "tech",
       "title": "Technology",

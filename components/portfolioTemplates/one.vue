@@ -1,8 +1,8 @@
 <template>
   <div class="one">
-    <div class="title center">
+    <div class="title center text">
       <editable-area :text="blob.title" type="h3" />
-      <editable-area :text="blob.desc" />
+      <editable-area :text="blob.desc" type="p" multiline />
     </div>
     <div class="grid container contain">
       <div v-for="x in blob.images" :key="x">

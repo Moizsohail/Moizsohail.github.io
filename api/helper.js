@@ -21,6 +21,9 @@ export const getAllInfo = () => {
       .filter((f) => !['.DS_Store'].includes(f))
       .map(getInfoBySlug)
       .filter(({ hidden }) => !hidden)
+      .sort((a, b) => {
+        return a?.priority > b?.priority || (a.priority && !b.priority) ? -1 : 1
+      })
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error(e)

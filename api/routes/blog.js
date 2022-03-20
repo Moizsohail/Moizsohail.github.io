@@ -13,7 +13,7 @@ router.get('/blog', async (req, res) => {
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error(e)
-    return res.status(500).json({ items: [] })
+    return res.status(701).json({ items: [] })
   }
 })
 export default router

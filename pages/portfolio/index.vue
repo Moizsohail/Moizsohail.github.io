@@ -1,7 +1,7 @@
 <template>
   <div id="portfolio">
     <!-- Vlancer DementiaCare+ PsifiX OrientedYolo MemeCleaner Detector LMSScraper Retweeter-->
-    <p class="text-h3 mx-auto title">MY WORK</p>
+    <h3 id="my-work">MY WORK</h3>
     <div id="list-complete-demo">
       <div class="list-complete" tag="section">
         <div class="trans row">
@@ -34,7 +34,9 @@
                   </v-row>
                 </template>
               </v-img>
-              <p class="text-h3 top-title">{{ item.title }}</p>
+              <h3 class="text-h3 card-top-title gotham-title">
+                {{ item.title }}
+              </h3>
             </div>
           </div>
         </div>
@@ -83,6 +85,7 @@ export default {
       this.work = await this.$axios.$get('/api/project')
     } catch (e) {
       console.log(e)
+      this.$nuxt.error({ statusCode: 500, message: e })
     }
   },
   methods: {
@@ -95,7 +98,7 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 @font-face {
   font-family: 'Gotham';
   src: local('Gotham'),
@@ -109,20 +112,28 @@ export default {
   position: absolute;
   display: none;
 }
-
-.top-title {
+.card-top-title {
   z-index: 1;
   top: 30px;
   left: 30px;
-  font-family: Gotham !important;
-  /* font-size: 39px !important; */
   font-size: 2.5rem !important;
   position: absolute;
+}
+#my-work {
+  @extend .gotham-title;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  margin: 80px 0px 10px 0px;
+}
+.gotham-title {
+  font-family: Gotham !important;
 }
 .bottom-tags {
   position: absolute;
   bottom: 30px;
   right: 30px;
+
   font-size: 16px;
 }
 .list {

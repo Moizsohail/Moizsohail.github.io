@@ -66,7 +66,7 @@ export default {
           link: '/portfolio',
           mini: [
             { title: 'Vlancer', link: '/portfolio/vlancer' },
-            { title: 'PsifiX', link: '/portfolio/psifix' },
+            { title: 'PsifiX', link: '/portfolio/psifixi' },
             { title: 'More', link: '/portfolio' },
           ],
           clicked: false,

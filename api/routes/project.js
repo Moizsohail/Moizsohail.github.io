@@ -12,7 +12,7 @@ router.get('/project', (req, res) => {
       return res.json(getAllInfo())
     }
   } catch (e) {
-    return res.status(400).json({ error: e })
+    return res.status(702).json({ error: e })
   }
 })
 export default router
